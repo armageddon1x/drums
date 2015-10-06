@@ -1,0 +1,45 @@
+* { margin: 0; padding: 0; font-family: arial; }
+
+#head { height: 12vh; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.9); }
+#head h1 { text-align: center; color: white; font-size: 60px; }
+
+#foot { height: 8vh; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.9); }
+#foot h2 { text-align: center; color: white; font-size: 30px; }
+
+#wrap { height: 80vh; background: #242424; }
+#wrap .container { height: 25%; width: 70%; margin: 0 auto; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.7); }
+#wrap .container .button { float: left; width: 15%; height: 80%; cursor: pointer; border-radius: 5px; display: flex; justify-content: center; align-items: center; color: black; font-size: 60px; font-family: arial; font-weight: bold; text-shadow: -1px -1px 0 #ffffff,   1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; }
+#wrap .container .button:active { transition: margin-top 0.1s ease, box-shadow 0.1s ease; margin-top: 4px; }
+#wrap .container .button + .button { margin-left: 6.666666666%; }
+
+#color_1 { background: #BF1100; box-shadow: 1px 0px 0px #710B01, 0px 1px 0px #710B01, 2px 1px 0px #710B01, 1px 2px 0px #710B01, 3px 2px 0px #710B01, 2px 3px 0px #710B01, 4px 3px 0px #710B01, 3px 4px 0px #710B01; }
+
+#color_2 { background: #00088F; box-shadow: 1px 0px 0px #000442, 0px 1px 0px #000442, 2px 1px 0px #000442, 1px 2px 0px #000442, 3px 2px 0px #000442, 2px 3px 0px #000442, 4px 3px 0px #000442, 3px 4px 0px #000442; }
+
+#color_3 { background: #0F6600; box-shadow: 1px 0px 0px #052500, 0px 1px 0px #052500, 2px 1px 0px #052500, 1px 2px 0px #052500, 3px 2px 0px #052500, 2px 3px 0px #052500, 4px 3px 0px #052500, 3px 4px 0px #052500; }
+
+#color_4 { background: gray; box-shadow: 1px 0px 0px #353535, 0px 1px 0px #353535, 2px 1px 0px #353535, 1px 2px 0px #353535, 3px 2px 0px #353535, 2px 3px 0px #353535, 4px 3px 0px #353535, 3px 4px 0px #353535; }
+
+#color_5 { background: #44024C; box-shadow: 1px 0px 0px #1F0023, 0px 1px 0px #1F0023, 2px 1px 0px #1F0023, 1px 2px 0px #1F0023, 3px 2px 0px #1F0023, 2px 3px 0px #1F0023, 4px 3px 0px #1F0023, 3px 4px 0px #1F0023; }
+
+#color_6 { background: #D97000; box-shadow: 1px 0px 0px #793F00, 0px 1px 0px #793F00, 2px 1px 0px #793F00, 1px 2px 0px #793F00, 3px 2px 0px #793F00, 2px 3px 0px #793F00, 4px 3px 0px #793F00, 3px 4px 0px #793F00; }
+
+#color_7 { background: #D9D500; box-shadow: 1px 0px 0px #888500, 0px 1px 0px #888500, 2px 1px 0px #888500, 1px 2px 0px #888500, 3px 2px 0px #888500, 2px 3px 0px #888500, 4px 3px 0px #888500, 3px 4px 0px #888500; }
+
+#color_8 { background: #4C2F00; box-shadow: 1px 0px 0px #1F1300, 0px 1px 0px #1F1300, 2px 1px 0px #1F1300, 1px 2px 0px #1F1300, 3px 2px 0px #1F1300, 2px 3px 0px #1F1300, 4px 3px 0px #1F1300, 3px 4px 0px #1F1300; }
+
+#color_9 { background: pink; box-shadow: 1px 0px 0px #FF6983, 0px 1px 0px #FF6983, 2px 1px 0px #FF6983, 1px 2px 0px #FF6983, 3px 2px 0px #FF6983, 2px 3px 0px #FF6983, 4px 3px 0px #FF6983, 3px 4px 0px #FF6983; }
+
+#color_10 { background: #232323; box-shadow: 1px 0px 0px #131313, 0px 1px 0px #131313, 2px 1px 0px #131313, 1px 2px 0px #131313, 3px 2px 0px #131313, 2px 3px 0px #131313, 4px 3px 0px #131313, 3px 4px 0px #131313; }
+
+#color_11 { background: #0AD6D9; box-shadow: 1px 0px 0px #007C7D, 0px 1px 0px #007C7D, 2px 1px 0px #007C7D, 1px 2px 0px #007C7D, 3px 2px 0px #007C7D, 2px 3px 0px #007C7D, 4px 3px 0px #007C7D, 3px 4px 0px #007C7D; }
+
+#color_12 { background: #DB12D3; box-shadow: 1px 0px 0px #73096F, 0px 1px 0px #73096F, 2px 1px 0px #73096F, 1px 2px 0px #73096F, 3px 2px 0px #73096F, 2px 3px 0px #73096F, 4px 3px 0px #73096F, 3px 4px 0px #73096F; }
+
+#color_13 { background: #3D301C; box-shadow: 1px 0px 0px #130E07, 0px 1px 0px #130E07, 2px 1px 0px #130E07, 1px 2px 0px #130E07, 3px 2px 0px #130E07, 2px 3px 0px #130E07, 4px 3px 0px #130E07, 3px 4px 0px #130E07; }
+
+#color_14 { background: #07D900; box-shadow: 1px 0px 0px #2A7928, 0px 1px 0px #2A7928, 2px 1px 0px #2A7928, 1px 2px 0px #2A7928, 3px 2px 0px #2A7928, 2px 3px 0px #2A7928, 4px 3px 0px #2A7928, 3px 4px 0px #2A7928; }
+
+#color_15 { background: #D9423A; box-shadow: 1px 0px 0px #861F1A, 0px 1px 0px #861F1A, 2px 1px 0px #861F1A, 1px 2px 0px #861F1A, 3px 2px 0px #861F1A, 2px 3px 0px #861F1A, 4px 3px 0px #861F1A, 3px 4px 0px #861F1A; }
+
+#color_16 { background: #DADADB; box-shadow: 1px 0px 0px #828282, 0px 1px 0px #828282, 2px 1px 0px #828282, 1px 2px 0px #828282, 3px 2px 0px #828282, 2px 3px 0px #828282, 4px 3px 0px #828282, 3px 4px 0px #828282; }

@@ -1,0 +1,113 @@
+@import "colors";
+
+*{margin:0;padding:0;font-family:arial;}
+
+@mixin button_shadow($color){
+	box-shadow: 1px 0px 0px $color,0px 1px 0px $color,
+              2px 1px 0px $color,1px 2px 0px $color,
+              3px 2px 0px $color,2px 3px 0px $color,
+              4px 3px 0px $color,3px 4px 0px $color,
+              // 5px 4px 0px $color,4px 5px 0px $color,
+              // 6px 5px 0px $color,5px 6px 0px $color,
+              // 7px 6px 0px $color,6px 7px 0px $color,
+              // 8px 7px 0px $color,7px 8px 0px $color,
+              // 9px 8px 0px $color,8px 9px 0px $color;
+}
+
+@mixin black_back($opacity){
+	background: rgba(0,0,0,$opacity);
+}
+
+#head{
+	height:12vh;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	@include black_back(.9);
+
+	h1{
+		text-align:center;
+		color: white;
+		font-size: 60px;
+	}
+}
+#foot{
+	height:8vh;
+	display:flex;
+	justify-content:center;
+	align-items:center;
+	@include black_back(.9);
+	
+	h2{
+		text-align:center;
+		color: white;
+		font-size: 30px;
+	}
+}
+
+#wrap{
+
+	height:80vh;
+	background:$wrap_back;
+	
+	.container{
+
+		height: 25%;
+		width: 70%;
+		margin: 0 auto;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		@include black_back(.7);
+
+		.button{
+			float: left;
+			width: 15%;
+			height: 80%;
+			cursor: pointer;
+			border-radius: 5px;
+			display:flex;
+			justify-content:center;
+			align-items:center;
+			color: black;
+			font-size: 60px;
+			font-family: arial;
+			font-weight: bold;
+			text-shadow:
+  		 -1px -1px 0 #ffffff,  
+   			1px -1px 0 #ffffff,
+ 				-1px 1px 0 #ffffff,
+     		1px 1px 0 #ffffff;
+		}
+
+		.button:active{
+			transition: margin-top 0.1s ease,
+	          			box-shadow 0.1s ease;
+			margin-top:4px;
+		}
+
+		.button+.button{margin-left:6.666666666%;}
+
+	}
+
+}
+
+#color_1{background:$red;@include button_shadow(#710B01);}
+#color_2{background:$blue;@include button_shadow(#000442);}
+#color_3{background:$green;@include button_shadow(#052500);}
+#color_4{background:$gray;@include button_shadow(#353535);}
+
+#color_5{background:$purple;@include button_shadow(#1F0023);}
+#color_6{background:$orange;@include button_shadow(#793F00);}
+#color_7{background:$yellow;@include button_shadow(#888500);}
+#color_8{background:$brown;@include button_shadow(#1F1300);}
+
+#color_9{background:$pink;@include button_shadow(#FF6983);}
+#color_10{background:$dark_gray;@include button_shadow(#131313);}
+#color_11{background:$light_blue;@include button_shadow(#007C7D);}
+#color_12{background:$light_purple;@include button_shadow(#73096F);}
+
+#color_13{background:$dark_brown;@include button_shadow(#130E07);}
+#color_14{background:$light_green;@include button_shadow(#2A7928);}
+#color_15{background:$light_red;@include button_shadow(#861F1A);}
+#color_16{background:$white;@include button_shadow(#828282);}
