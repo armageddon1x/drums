@@ -18,6 +18,8 @@
 	background: rgba(0,0,0,$opacity);
 }
 
+body{overflow:hidden;}
+
 #head{
 	height:12vh;
 	display:flex;
@@ -92,22 +94,86 @@
 
 }
 
-#color_1{background:$red;@include button_shadow(#710B01);}
-#color_2{background:$blue;@include button_shadow(#000442);}
-#color_3{background:$green;@include button_shadow(#052500);}
-#color_4{background:$gray;@include button_shadow(#353535);}
+#color_1{background:$red;@include button_shadow($red_shadow);}
+#color_2{background:$blue;@include button_shadow($blue_shadow);}
+#color_3{background:$green;@include button_shadow($green_shadow);}
+#color_4{background:$gray;@include button_shadow($gray_shadow);}
 
-#color_5{background:$purple;@include button_shadow(#1F0023);}
-#color_6{background:$orange;@include button_shadow(#793F00);}
-#color_7{background:$yellow;@include button_shadow(#888500);}
-#color_8{background:$brown;@include button_shadow(#1F1300);}
+#color_5{background:$purple;@include button_shadow($purple_shadow);}
+#color_6{background:$orange;@include button_shadow($orange_shadow);}
+#color_7{background:$yellow;@include button_shadow($yellow_shadow);}
+#color_8{background:$brown;@include button_shadow($brown_shadow);}
 
-#color_9{background:$pink;@include button_shadow(#FF6983);}
-#color_10{background:$dark_gray;@include button_shadow(#131313);}
-#color_11{background:$light_blue;@include button_shadow(#007C7D);}
-#color_12{background:$light_purple;@include button_shadow(#73096F);}
+#color_9{background:$pink;@include button_shadow($pink_shadow);}
+#color_10{background:$dark_gray;@include button_shadow($dark_gray_shadow);}
+#color_11{background:$light_blue;@include button_shadow($light_blue_shadow);}
+#color_12{background:$light_purple;@include button_shadow($light_purple_shadow);}
 
-#color_13{background:$dark_brown;@include button_shadow(#130E07);}
-#color_14{background:$light_green;@include button_shadow(#2A7928);}
-#color_15{background:$light_red;@include button_shadow(#861F1A);}
-#color_16{background:$white;@include button_shadow(#828282);}
+#color_13{background:$dark_brown;@include button_shadow($dark_brown_shadow);}
+#color_14{background:$light_green;@include button_shadow($light_green_shadow);}
+#color_15{background:$light_red;@include button_shadow($light_red_shadow);}
+#color_16{background:$white;@include button_shadow($white_shadow);}
+
+#panel{
+	position: absolute;
+	top:0;
+	left:97%;
+	z-index:100;
+	width:30%;
+	color:white;
+	background:black;
+	//
+	#arrow{
+		width: 10%;
+		height: 100vh;
+		background:rgba(0,0,0,.8);;
+		float: left;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+
+		#arrowhead{
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 20px 20px 20px 0;
+			border-color: transparent #424242 transparent transparent;
+		}
+	}
+	#top{
+		height: 15vh;
+		width: 90%;
+		float: right;
+		// background:rgba(0,0,0,.9);
+		display:flex;
+		justify-content:center;
+		align-items:center;
+	}
+	#sounds{
+		height: 85vh;
+		width: 90%;
+		float: right;
+		// background:rgba(0,0,0,.7);
+		.sound_button{
+	    background:black;
+	    color:white;
+	    border-radius:5px;
+	    text-align:center;
+	    width:100px;
+	    padding:5px;
+	    border:2px solid gray;
+	    cursor: pointer;
+	    margin-bottom:10px;
+		}
+		.html_sound_button{
+			display:none;
+		}
+		p{
+			color:white;
+		}
+	}
+}
+
+.slide{
+	left:-70%;
+}

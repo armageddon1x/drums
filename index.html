@@ -5,45 +5,85 @@
 		<title>Drums</title>
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/jquery.js"></script>
+		<script src="js/id3.min.js"></script>
 		<script src="js/function.js"></script>
-	</head>
 	<body>
-		<header id="head">
+		<!-- header -->
+		<div id="container">
+			<!--  -->
+			<header id="head">
 			<h1>Drum Kit</h1>
-		</header>
-		<div id="wrap">
-
-			<div class="container">
-				<div class="button" id="color_1">1</div>
-				<div class="button" id="color_2">2</div>
-				<div class="button" id="color_3">3</div>
-				<div class="button" id="color_4">4</div>
+			</header>
+			<div id="wrap">
+				<!-- buttons 1-4 -->
+				<div class="container">
+					<div class="button" id="color_1">1</div>
+					<div class="button" id="color_2">2</div>
+					<div class="button" id="color_3">3</div>
+					<div class="button" id="color_4">4</div>
+				</div>
+				<!-- buttons 5-8 -->
+				<div class="container">
+					<div class="button" id="color_5">5</div>
+					<div class="button" id="color_6">6</div>
+					<div class="button" id="color_7">7</div>
+					<div class="button" id="color_8">8</div>
+				</div>
+				<!-- buttons 9-12 -->
+				<div class="container">
+					<div class="button" id="color_9">9</div>
+					<div class="button" id="color_10">10</div>
+					<div class="button" id="color_11">11</div>
+					<div class="button" id="color_12">12</div>
+				</div>
+				<!-- buttons 13-16 -->
+				<div class="container">
+					<div class="button" id="color_13">13</div>
+					<div class="button" id="color_14">14</div>
+					<div class="button" id="color_15">15</div>
+					<div class="button" id="color_16">16</div>
+				</div>
 			</div>
+			<!-- footer -->
+			<footer id="foot">
+				<h2>All Rights Reserved</h2>
+			</footer>
+			<!--  -->
 
-			<div class="container">
-				<div class="button" id="color_5">5</div>
-				<div class="button" id="color_6">6</div>
-				<div class="button" id="color_7">7</div>
-				<div class="button" id="color_8">8</div>
+			<div id="panel">
+			<div id="arrow">
+				<div id="arrowhead"></div>
 			</div>
-
-			<div class="container">
-				<div class="button" id="color_9">9</div>
-				<div class="button" id="color_10">10</div>
-				<div class="button" id="color_11">11</div>
-				<div class="button" id="color_12">12</div>
+			<div id="top">Load Your Sounds Here</div>
+			<!-- sound file -->
+			<div id="sounds">
+				<div class="sound_file">
+					<div class="sound_button">Sound</div>
+					<input type="file" id="sound_1" class="html_sound_button">
+					<p>Title: </p><p class="file_title"></p>
+					<p>Artist: </p><p class="file_artist"></p>
+					<p>Duration: </p><p class="file_duration"></p>
+					<p>Type: </p><p class="file_type"></p>
+				</div>
 			</div>
-
-			<div class="container">
-				<div class="button" id="color_13">13</div>
-				<div class="button" id="color_14">14</div>
-				<div class="button" id="color_15">15</div>
-				<div class="button" id="color_16">16</div>
+			
+			<!-- sound file -->
+			<div id="sounds">
+				<div class="sound_file">
+					<div class="sound_button">Sound</div>
+					<input type="file" id="sound_1" class="html_sound_button">
+					<p>Title: </p><p class="file_title"></p>
+					<p>Artist: </p><p class="file_artist"></p>
+					<p>Duration: </p><p class="file_duration"></p>
+					<p>Type: </p><p class="file_type"></p>
+				</div>
 			</div>
 
 		</div>
-		<footer id="foot">
-			<h2>All Rights Reserved</h2>
-		</footer>
+		</div>
+		
+
+		
+
 	</body>
 	</html>
