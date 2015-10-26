@@ -36,7 +36,6 @@ $(function(){
 	//bind styled button to file upload button
   $(".sound_button").bind("click", function(){
     $(this).siblings(".html_sound_button").click();
-
   });
 
   
@@ -44,53 +43,50 @@ $(function(){
   //output ID3 information
   $("sound_button").click(function(){
     $(this).siblings(".html_sound_button").on("change",read_sound_file,false);
-
-    //
-
-    //
-
-   //  id3(this.files[0], function(err, tags) {
-   //     // console.log(tags);
-   //     // console.log(tags.artist);
-   //     // console.log($(this));
-   //     // $(this).siblings(".file_artist").html(music_tags.artist);
-   // })
   });
 
-  // document.querySelector('input[type="file"]').onchange = function(e) {
-  //     id3(this.files[0], function(err, tags) {
-  //       // tags now contains your ID3 tags
-  //       console.log(tags);
-  //       $(this).siblings(".file_artist").html(tags.artist);
-  //    });
-  //   }
+  //
+  var objectUrl;
+  $(".audio").on("canplaythrough", function(e){
+    var length=e.currentTarget.duration;
+    var duration=$(this).siblings(".file_duration");
+    
+    var minutes=Math.floor(length/60);
+    var seconds=(length%60).toFixed(0);
 
-    $(".html_sound_button").change(function(){
-      id3(this.files[0], function(err, tags) {
-        // tags now contains your ID3 tags
-        console.log(tags);
-        console.log("jquizzle");
-        console.log($(this));
-        $(this).siblings(".file_artist").html(tags.artist);
-        $(this).siblings(".file_artist").html("yyyyyy");
-     });
-    })
 
-  //getting info from file
-//   function read_sound_file(){
-//    id3(this.files[0], function(err, tags) {
-//        console.log(tags);
-//        console.log(tags.artist);
-//        // var music_tags=tags;
-//        // console.log(music_tags);
-//        // $(this).siblings(".file_artist").css("height", "100px");
-      
-//        console.log($(this));
-//        // $(this).siblings(".file_artist").html(music_tags.artist);
-//    })
-// }
+    var time=minutes+":";
+    if(seconds<10){time=time+"0"+seconds;}
+    else{time=time+seconds;}
 
-// document.getElementsByTagName("input")[0].addEventListener("change",read_sound_file,false);
+    print(duration, time);
+
+    URL.revokeObjectURL(objectUrl);
+});
+  //
+
+  $(".html_sound_button").change(function(e){
+    var file=e.currentTarget.files[0];
+    // console.log(file);
+    var title=$(this).siblings(".file_title");
+    var artist=$(this).siblings(".file_artist");
+
+    id3(this.files[0], function(err, tags) {
+      print(title, tags.title);
+      print(artist, tags.artist);
+    });
+
+    objectUrl = URL.createObjectURL(file);
+    $(".audio").prop("src", objectUrl);
+   
+  });
+
+  function print(element, tag){
+    element.html(" "+tag);
+  }
+
+
+
 // 	//end
 })
 //-----------------------------------------------------------//
