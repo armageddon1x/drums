@@ -8,7 +8,7 @@
 		<script src="js/id3.min.js"></script>
 		<script src="js/function.js"></script>
 
-		<style type="text/css">audio{display: none;}</style>
+		<style type="text/css">audio{display: block;}</style>
 	<body>
 		<!-- header -->
 		<div id="container">
@@ -58,11 +58,12 @@
 			</div>
 			<div id="top">Load Your Sounds Here</div>
 			<div id="sounds">
+
 				<!-- sound file -->
 				<div class="sound_file">
-					<audio class="audio" id="player" preload="auto"></audio>
+					<audio controls class="player" id="player" preload="auto"></audio>
 					<div class="sound_button">Sound</div>
-					<input type="file" accept="audio/*" id="sound_1" class="html_sound_button">
+					<input type="file" accept="audio/*" class="html_sound_button">
 					
 					<p>Title</p><p class="file_title"></p>
 					<br>
@@ -72,23 +73,20 @@
 				</div>
 				<!-- sound file -->
 				<div class="sound_file">
+					<audio class="player" id="player" preload="auto"></audio>
 					<div class="sound_button">Sound</div>
-					<input type="file" id="sound_1" class="html_sound_button">
+					<input type="file" accept="audio/*" id="sound_2" class="html_sound_button">
 					
-					<p>Title: </p><p class="file_title"></p>
-					<p>Artist: </p><p class="file_artist"></p>
-					<p>Duration: </p><p class="file_duration"></p>
-					<p>Type: </p><p class="file_type"></p>
+					<p>Title</p><p class="file_title"></p>
+					<br>
+					<p>Artist</p><p class="file_artist"></p>
+					<br>
+					<p>Duration</p><p class="file_duration"></p>
 				</div>
+				</div>
+			
 			</div>
-
-
-
 		</div>
 		</div>
-		
-
-		
-
 	</body>
 	</html>
