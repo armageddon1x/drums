@@ -10,7 +10,9 @@ body { overflow-x: hidden; }
 
 #wrap { height: 80vh; background: #242424; }
 #wrap .container { height: 25%; width: 80%; margin: 0 auto; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.7); }
-#wrap .container .color_chooser { border: 1px solid white; height: 100px; width: 14%; }
+#wrap .container .color_chooser { border: 1px solid white; height: 100%; width: 14%; }
+#wrap .container .color_chooser .button_space { width: 50%; height: 50%; border: 1px blue solid; margin-top: 25%; }
+#wrap .container .color_chooser button { width: 70%; height: 50%; margin: 0; display: block; }
 #wrap .container .button { float: left; width: 13%; height: 75%; cursor: pointer; border-radius: 5px; display: flex; justify-content: center; align-items: center; color: black; font-size: 60px; font-family: arial; font-weight: bold; text-shadow: -1px -1px 0 #ffffff,   1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; }
 #wrap .container .button:active { transition: margin-top 0.1s ease, box-shadow 0.1s ease; margin-top: 4px; }
 #wrap .container .button + .button { margin-left: 6.666666666%; }

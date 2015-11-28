@@ -62,7 +62,25 @@ body{overflow-x:hidden;}
 		align-items:center;
 		@include black_back(.7);
 
-		.color_chooser{border:1px solid white;height:100px;width:14%;}
+		.color_chooser{
+			border:1px solid white;
+			height:100%;
+			width:14%;
+
+			.button_space{
+				width:50%;
+				height:50%;
+				border:1px blue solid;
+				margin-top:25%;
+			}
+
+			button{
+				width:70%;
+				height:50%;
+				margin:0;
+				display:block;
+			}
+		}
 
 		.button{
 			float: left;

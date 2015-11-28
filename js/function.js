@@ -105,32 +105,29 @@ var clips={};
     });
   })
 
+  //-----------------------------------------------------------//
+  //set variable on buttons
+  //-----------------------------------------------------------//
+  var c1=$("#color_1");
+  var c2=$("#color_2");
+  var c3=$("#color_3");
+  var c4=$("#color_4");
+  var c5=$("#color_5");
+  var c6=$("#color_6");
+  var c7=$("#color_7");
+  var c8=$("#color_8");
+  var c9=$("#color_9");
+  var c10=$("#color_10");
+  var c11=$("#color_11");
+  var c12=$("#color_12");
+  var c13=$("#color_13");
+  var c14=$("#color_14");
+  var c15=$("#color_15");
+  var c16=$("#color_16");
 
-setTimeout(function(){
-  console.log(clips);
-  console.log(clips.player_1);
-},9000);
-  
-var c1=$("#color_1");
-var c2=$("#color_2");
-var c3=$("#color_3");
-var c4=$("#color_4");
-var c5=$("#color_5");
-var c6=$("#color_6");
-var c7=$("#color_7");
-var c8=$("#color_8");
-var c9=$("#color_9");
-var c10=$("#color_10");
-var c11=$("#color_11");
-var c12=$("#color_12");
-var c13=$("#color_13");
-var c14=$("#color_14");
-var c15=$("#color_15");
-var c16=$("#color_16");
-
-  // play_sound($("#color_1"), clips.player_1);
-  // play_sound($("#color_2"), clips.player_2);
-
+  //-----------------------------------------------------------//
+  //call function to play sound on button click
+  //-----------------------------------------------------------//
   play_sound(c1, player_1);
   play_sound(c2, player_2);
   play_sound(c3, player_3);
@@ -187,6 +184,22 @@ var c16=$("#color_16");
       soundbite.pause();
       soundbite.currentTime=0;
       soundbite.play();
+    });
+  }
+
+  //-----------------------------------------------------------//
+  //changes color of buttons
+  //-----------------------------------------------------------//
+  function button_color($element, picker){
+    $element[0].style.background='#'+picker.toString()
+  }
+
+  //-----------------------------------------------------------//
+  //changes color of box shadow
+  //-----------------------------------------------------------//
+  function shadow_color($element, picker){
+    hex='#'+picker.toString();
+    $element.css({'box-shadow':'                                                1px 0px 0px '+hex+', 0px 1px 0px '+hex+',                                2px 1px 0px '+hex+', 1px 2px 0px '+hex+',                               3px 2px 0px '+hex+', 2px 3px 0px '+hex+',                               4px 3px 0px '+hex+', 3px 4px 0px '+hex+',                               5px 4px 0px '+hex+', 4px 5px 0px '+hex+',                                6px 5px 0px '+hex+', 5px 6px 0px '+hex+',                                7px 6px 0px '+hex+', 6px 7px 0px '+hex+',                               8px 7px 0px '+hex+', 7px 8px 0px '+hex+',                                  9px 8px 0px '+hex+', 8px 9px 0px '+hex
     });
   }
 

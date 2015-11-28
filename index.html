@@ -6,6 +6,7 @@
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/jquery.js"></script>
 		<script src="js/id3.min.js"></script>
+		<script src="js/jscolor.min.js"></script>
 		<script src="js/function.js"></script>
 
 		<style type="text/css">audio{display: block;}</style>
@@ -21,6 +22,18 @@
 				<div class="container">
 					<div class="color_chooser">
 						<!--  -->
+						<div class="button_space">
+							<button
+					    class="jscolor 
+						    {valueElement:null,value:'BF1100', onFineChange:'button_color($(&quot;#color_1&quot;),this)'}"
+					    ></button>
+					  <button
+					    class="jscolor 
+						    {valueElement:null,value:'BF1100', onFineChange:'shadow_color($(&quot;#color_1&quot;),this)'}"
+					    ></button>
+						</div>
+						
+					   
 					</div>
 					<div class="button" id="color_1">1</div>
 					<div class="button" id="color_2">2</div>
@@ -51,6 +64,18 @@
 					<div class="button" id="color_15">15</div>
 					<div class="button" id="color_16">16</div>
 				</div>
+				
+				<!-- JS for changing color/box shadow of buttons -->
+				<script>
+			    function button_color($element, picker){
+				    $element[0].style.background='#'+picker.toString()
+				  }
+		    	function shadow_color($element, picker){
+				    hex='#'+picker.toString();
+				    $element.css({'box-shadow':'															1px 0px 0px '+hex+', 0px 1px 0px '+hex+',								2px 1px 0px '+hex+', 1px 2px 0px '+hex+',								3px 2px 0px '+hex+', 2px 3px 0px '+hex+',								4px 3px 0px '+hex+', 3px 4px 0px '+hex+',								5px 4px 0px '+hex+', 4px 5px 0px '+hex+',								6px 5px 0px '+hex+', 5px 6px 0px '+hex+',								7px 6px 0px '+hex+', 6px 7px 0px '+hex+',								8px 7px 0px '+hex+', 7px 8px 0px '+hex+',								9px 8px 0px '+hex+', 8px 9px 0px '+hex
+				    });
+				  }
+		    </script>
 			</div>
 			<!-- footer -->
 			<footer id="foot">
