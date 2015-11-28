@@ -10,9 +10,14 @@ body { overflow-x: hidden; }
 
 #wrap { height: 80vh; background: #242424; }
 #wrap .container { height: 25%; width: 80%; margin: 0 auto; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.7); }
-#wrap .container .color_chooser { border: 1px solid white; height: 100%; width: 14%; }
-#wrap .container .color_chooser .button_space { width: 50%; height: 50%; border: 1px blue solid; margin-top: 25%; }
-#wrap .container .color_chooser button { width: 70%; height: 50%; margin: 0; display: block; }
+#wrap .container .color_chooser { height: 100%; width: 14%; }
+#wrap .container .color_chooser .button_space { width: 47%; height: 50%; display: inline-block; margin-top: 25%; position: relative; }
+#wrap .container .color_chooser button { width: 70%; height: 50%; display: block; border: none; position: absolute; }
+#wrap .container .color_chooser .top { border-radius: 5px 5px 0 0; }
+#wrap .container .color_chooser .bottom { border-radius: 0 0 5px 5px; top: 50%; }
+#wrap .container .color_chooser .left { left: 10%; }
+#wrap .container .color_chooser .middle { right: 0; }
+#wrap .container .color_chooser .right { right: 6%; }
 #wrap .container .button { float: left; width: 13%; height: 75%; cursor: pointer; border-radius: 5px; display: flex; justify-content: center; align-items: center; color: black; font-size: 60px; font-family: arial; font-weight: bold; text-shadow: -1px -1px 0 #ffffff,   1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; }
 #wrap .container .button:active { transition: margin-top 0.1s ease, box-shadow 0.1s ease; margin-top: 4px; }
 #wrap .container .button + .button { margin-left: 6.666666666%; }
@@ -23,7 +28,7 @@ body { overflow-x: hidden; }
 
 #color_3 { background: #0F6600; box-shadow: 1px 0px 0px #052500, 0px 1px 0px #052500, 2px 1px 0px #052500, 1px 2px 0px #052500, 3px 2px 0px #052500, 2px 3px 0px #052500, 4px 3px 0px #052500, 3px 4px 0px #052500, 5px 4px 0px #052500, 4px 5px 0px #052500, 6px 5px 0px #052500, 5px 6px 0px #052500, 7px 6px 0px #052500, 6px 7px 0px #052500, 8px 7px 0px #052500, 7px 8px 0px #052500, 9px 8px 0px #052500, 8px 9px 0px #052500; }
 
-#color_4 { background: gray; box-shadow: 1px 0px 0px #353535, 0px 1px 0px #353535, 2px 1px 0px #353535, 1px 2px 0px #353535, 3px 2px 0px #353535, 2px 3px 0px #353535, 4px 3px 0px #353535, 3px 4px 0px #353535, 5px 4px 0px #353535, 4px 5px 0px #353535, 6px 5px 0px #353535, 5px 6px 0px #353535, 7px 6px 0px #353535, 6px 7px 0px #353535, 8px 7px 0px #353535, 7px 8px 0px #353535, 9px 8px 0px #353535, 8px 9px 0px #353535; }
+#color_4 { background: #808080; box-shadow: 1px 0px 0px #353535, 0px 1px 0px #353535, 2px 1px 0px #353535, 1px 2px 0px #353535, 3px 2px 0px #353535, 2px 3px 0px #353535, 4px 3px 0px #353535, 3px 4px 0px #353535, 5px 4px 0px #353535, 4px 5px 0px #353535, 6px 5px 0px #353535, 5px 6px 0px #353535, 7px 6px 0px #353535, 6px 7px 0px #353535, 8px 7px 0px #353535, 7px 8px 0px #353535, 9px 8px 0px #353535, 8px 9px 0px #353535; }
 
 #color_5 { background: #44024C; box-shadow: 1px 0px 0px #1F0023, 0px 1px 0px #1F0023, 2px 1px 0px #1F0023, 1px 2px 0px #1F0023, 3px 2px 0px #1F0023, 2px 3px 0px #1F0023, 4px 3px 0px #1F0023, 3px 4px 0px #1F0023, 5px 4px 0px #1F0023, 4px 5px 0px #1F0023, 6px 5px 0px #1F0023, 5px 6px 0px #1F0023, 7px 6px 0px #1F0023, 6px 7px 0px #1F0023, 8px 7px 0px #1F0023, 7px 8px 0px #1F0023, 9px 8px 0px #1F0023, 8px 9px 0px #1F0023; }
 
@@ -33,7 +38,7 @@ body { overflow-x: hidden; }
 
 #color_8 { background: #4C2F00; box-shadow: 1px 0px 0px #1F1300, 0px 1px 0px #1F1300, 2px 1px 0px #1F1300, 1px 2px 0px #1F1300, 3px 2px 0px #1F1300, 2px 3px 0px #1F1300, 4px 3px 0px #1F1300, 3px 4px 0px #1F1300, 5px 4px 0px #1F1300, 4px 5px 0px #1F1300, 6px 5px 0px #1F1300, 5px 6px 0px #1F1300, 7px 6px 0px #1F1300, 6px 7px 0px #1F1300, 8px 7px 0px #1F1300, 7px 8px 0px #1F1300, 9px 8px 0px #1F1300, 8px 9px 0px #1F1300; }
 
-#color_9 { background: pink; box-shadow: 1px 0px 0px #FF6983, 0px 1px 0px #FF6983, 2px 1px 0px #FF6983, 1px 2px 0px #FF6983, 3px 2px 0px #FF6983, 2px 3px 0px #FF6983, 4px 3px 0px #FF6983, 3px 4px 0px #FF6983, 5px 4px 0px #FF6983, 4px 5px 0px #FF6983, 6px 5px 0px #FF6983, 5px 6px 0px #FF6983, 7px 6px 0px #FF6983, 6px 7px 0px #FF6983, 8px 7px 0px #FF6983, 7px 8px 0px #FF6983, 9px 8px 0px #FF6983, 8px 9px 0px #FF6983; }
+#color_9 { background: #FFC0CB; box-shadow: 1px 0px 0px #FF6983, 0px 1px 0px #FF6983, 2px 1px 0px #FF6983, 1px 2px 0px #FF6983, 3px 2px 0px #FF6983, 2px 3px 0px #FF6983, 4px 3px 0px #FF6983, 3px 4px 0px #FF6983, 5px 4px 0px #FF6983, 4px 5px 0px #FF6983, 6px 5px 0px #FF6983, 5px 6px 0px #FF6983, 7px 6px 0px #FF6983, 6px 7px 0px #FF6983, 8px 7px 0px #FF6983, 7px 8px 0px #FF6983, 9px 8px 0px #FF6983, 8px 9px 0px #FF6983; }
 
 #color_10 { background: #232323; box-shadow: 1px 0px 0px #131313, 0px 1px 0px #131313, 2px 1px 0px #131313, 1px 2px 0px #131313, 3px 2px 0px #131313, 2px 3px 0px #131313, 4px 3px 0px #131313, 3px 4px 0px #131313, 5px 4px 0px #131313, 4px 5px 0px #131313, 6px 5px 0px #131313, 5px 6px 0px #131313, 7px 6px 0px #131313, 6px 7px 0px #131313, 8px 7px 0px #131313, 7px 8px 0px #131313, 9px 8px 0px #131313, 8px 9px 0px #131313; }
 

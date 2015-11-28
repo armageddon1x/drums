@@ -190,18 +190,18 @@ var clips={};
   //-----------------------------------------------------------//
   //changes color of buttons
   //-----------------------------------------------------------//
-  function button_color($element, picker){
-    $element[0].style.background='#'+picker.toString()
-  }
+  // function button_color($element, picker){
+  //   $element[0].style.background='#'+picker.toString()
+  // }
 
   //-----------------------------------------------------------//
   //changes color of box shadow
   //-----------------------------------------------------------//
-  function shadow_color($element, picker){
-    hex='#'+picker.toString();
-    $element.css({'box-shadow':'                                                1px 0px 0px '+hex+', 0px 1px 0px '+hex+',                                2px 1px 0px '+hex+', 1px 2px 0px '+hex+',                               3px 2px 0px '+hex+', 2px 3px 0px '+hex+',                               4px 3px 0px '+hex+', 3px 4px 0px '+hex+',                               5px 4px 0px '+hex+', 4px 5px 0px '+hex+',                                6px 5px 0px '+hex+', 5px 6px 0px '+hex+',                                7px 6px 0px '+hex+', 6px 7px 0px '+hex+',                               8px 7px 0px '+hex+', 7px 8px 0px '+hex+',                                  9px 8px 0px '+hex+', 8px 9px 0px '+hex
-    });
-  }
+  // function shadow_color($element, picker){
+  //   hex='#'+picker.toString();
+  //   $element.css({'box-shadow':'                                                1px 0px 0px '+hex+', 0px 1px 0px '+hex+',                                2px 1px 0px '+hex+', 1px 2px 0px '+hex+',                               3px 2px 0px '+hex+', 2px 3px 0px '+hex+',                               4px 3px 0px '+hex+', 3px 4px 0px '+hex+',                               5px 4px 0px '+hex+', 4px 5px 0px '+hex+',                                6px 5px 0px '+hex+', 5px 6px 0px '+hex+',                                7px 6px 0px '+hex+', 6px 7px 0px '+hex+',                               8px 7px 0px '+hex+', 7px 8px 0px '+hex+',                                  9px 8px 0px '+hex+', 8px 9px 0px '+hex
+  //   });
+  // }
 
   //-----------------------------------------------------------//
  	//end

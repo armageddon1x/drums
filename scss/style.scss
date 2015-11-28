@@ -63,23 +63,32 @@ body{overflow-x:hidden;}
 		@include black_back(.7);
 
 		.color_chooser{
-			border:1px solid white;
+			// border:1px solid white;
 			height:100%;
 			width:14%;
 
 			.button_space{
-				width:50%;
+				width:47%;
 				height:50%;
-				border:1px blue solid;
-				margin-top:25%;
+				display:inline-block;
+				margin-top: 25%;
+				position:relative;
+				// border:1px blue solid;
 			}
 
 			button{
 				width:70%;
 				height:50%;
-				margin:0;
 				display:block;
+				border:none;
+				position:absolute;
 			}
+
+			.top{border-radius: 5px 5px 0 0;}
+			.bottom{border-radius: 0 0 5px 5px;top:50%;}
+			.left{left:10%;}
+			.middle{right:0;}
+			.right{right:6%;}
 		}
 
 		.button{
