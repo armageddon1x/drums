@@ -1,6 +1,6 @@
 * { margin: 0; padding: 0; font-family: arial; }
 
-body { overflow: hidden; }
+body { overflow-x: hidden; }
 
 #head { height: 12vh; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.9); }
 #head h1 { text-align: center; color: white; font-size: 60px; }
@@ -9,8 +9,9 @@ body { overflow: hidden; }
 #foot h2 { text-align: center; color: white; font-size: 30px; }
 
 #wrap { height: 80vh; background: #242424; }
-#wrap .container { height: 25%; width: 70%; margin: 0 auto; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.7); }
-#wrap .container .button { float: left; width: 15%; height: 80%; cursor: pointer; border-radius: 5px; display: flex; justify-content: center; align-items: center; color: black; font-size: 60px; font-family: arial; font-weight: bold; text-shadow: -1px -1px 0 #ffffff,   1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; }
+#wrap .container { height: 25%; width: 80%; margin: 0 auto; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.7); }
+#wrap .container .color_chooser { border: 1px solid white; height: 100px; width: 14%; }
+#wrap .container .button { float: left; width: 13%; height: 75%; cursor: pointer; border-radius: 5px; display: flex; justify-content: center; align-items: center; color: black; font-size: 60px; font-family: arial; font-weight: bold; text-shadow: -1px -1px 0 #ffffff,   1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; }
 #wrap .container .button:active { transition: margin-top 0.1s ease, box-shadow 0.1s ease; margin-top: 4px; }
 #wrap .container .button + .button { margin-left: 6.666666666%; }
 
@@ -50,7 +51,7 @@ body { overflow: hidden; }
 #panel #arrow { width: 10%; height: 100vh; background: rgba(0, 0, 0, 0.8); float: left; display: flex; justify-content: center; align-items: center; }
 #panel #arrow #arrowhead { width: 0; height: 0; border-style: solid; border-width: 20px 20px 20px 0; border-color: transparent #424242 transparent transparent; }
 #panel #top { height: 12vh; width: 90%; float: right; background: rgba(0, 0, 0, 0.6); display: flex; justify-content: center; align-items: center; }
-#panel #sounds { box-sizing: border-box; padding: 10px; height: 88vh; width: 90%; float: right; background: rgba(0, 0, 0, 0.7); }
+#panel #sounds { box-sizing: border-box; padding: 10px; height: 88vh; width: 90%; float: right; background: rgba(0, 0, 0, 0.7); overflow-y: scroll; }
 #panel #sounds .sound_button { background: black; color: white; border-radius: 5px; text-align: center; width: 100px; padding: 5px; border: 2px solid gray; cursor: pointer; }
 #panel #sounds .html_sound_button { display: none; }
 #panel #sounds p { color: white; display: inline-block; }
