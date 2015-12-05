@@ -1,27 +1,3 @@
-* { margin: 0; padding: 0; font-family: arial; }
-
-body { overflow-x: hidden; }
-
-#head { height: 12vh; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.9); }
-#head h1 { text-align: center; color: white; font-size: 60px; }
-
-#foot { height: 8vh; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.9); }
-#foot h2 { text-align: center; color: white; font-size: 30px; }
-
-#wrap { height: 80vh; background: #242424; }
-#wrap .container { height: 25%; width: 80%; margin: 0 auto; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.7); }
-#wrap .container .color_chooser { height: 100%; width: 14%; }
-#wrap .container .color_chooser .button_space { width: 47%; height: 50%; display: inline-block; margin-top: 25%; position: relative; }
-#wrap .container .color_chooser button { width: 70%; height: 50%; display: block; border: none; position: absolute; }
-#wrap .container .color_chooser .top { border-radius: 5px 5px 0 0; }
-#wrap .container .color_chooser .bottom { border-radius: 0 0 5px 5px; top: 50%; }
-#wrap .container .color_chooser .left { left: 10%; }
-#wrap .container .color_chooser .middle { right: 0; }
-#wrap .container .color_chooser .right { right: 6%; }
-#wrap .container .button { float: left; width: 13%; height: 75%; cursor: pointer; border-radius: 5px; display: flex; justify-content: center; align-items: center; color: black; font-size: 60px; font-family: arial; font-weight: bold; text-shadow: -1px -1px 0 #ffffff,   1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; }
-#wrap .container .button:active { transition: margin-top 0.1s ease, box-shadow 0.1s ease; margin-top: 4px; }
-#wrap .container .button + .button { margin-left: 6.666666666%; }
-
 #color_1 { background: #BF1100; box-shadow: 1px 0px 0px #710B01, 0px 1px 0px #710B01, 2px 1px 0px #710B01, 1px 2px 0px #710B01, 3px 2px 0px #710B01, 2px 3px 0px #710B01, 4px 3px 0px #710B01, 3px 4px 0px #710B01, 5px 4px 0px #710B01, 4px 5px 0px #710B01, 6px 5px 0px #710B01, 5px 6px 0px #710B01, 7px 6px 0px #710B01, 6px 7px 0px #710B01, 8px 7px 0px #710B01, 7px 8px 0px #710B01, 9px 8px 0px #710B01, 8px 9px 0px #710B01; }
 
 #color_2 { background: #00088F; box-shadow: 1px 0px 0px #000442, 0px 1px 0px #000442, 2px 1px 0px #000442, 1px 2px 0px #000442, 3px 2px 0px #000442, 2px 3px 0px #000442, 4px 3px 0px #000442, 3px 4px 0px #000442, 5px 4px 0px #000442, 4px 5px 0px #000442, 6px 5px 0px #000442, 5px 6px 0px #000442, 7px 6px 0px #000442, 6px 7px 0px #000442, 8px 7px 0px #000442, 7px 8px 0px #000442, 9px 8px 0px #000442, 8px 9px 0px #000442; }
@@ -65,3 +41,31 @@ body { overflow-x: hidden; }
 #panel #sounds hr { width: 70%; margin: 5px auto; border: 0; border-top: 1px solid white; }
 
 .slide { left: -70%; }
+
+* { margin: 0; padding: 0; font-family: arial; }
+
+body { overflow-x: hidden; }
+
+#head { height: 11vh; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.9); }
+#head h1 { text-align: center; color: white; font-size: 60px; }
+
+#foot { height: 7vh; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.9); }
+#foot h2 { text-align: center; color: white; font-size: 30px; }
+
+#wrap { height: 80vh; background: #242424; padding-bottom: 2vh; }
+#wrap #start { padding-top: 1vh; }
+#wrap #end { padding-bottom: 1vh; }
+#wrap .container { height: 25%; width: 80%; margin: 0 auto; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.7); }
+#wrap .container .color_chooser { height: 100%; width: 14%; }
+#wrap .container .color_chooser .button_space { width: 20%; height: 100%; display: inline-block; position: relative; }
+#wrap .container .color_chooser button { width: 70%; height: 15%; display: block; border: none; position: absolute; cursor: pointer; outline: none; }
+#wrap .container .color_chooser .sounder { top: 20%; width: 70%; height: 30%; background: #3c3c3c; color: #d2d2d2; border-radius: 2px; border-bottom: 5px solid #BF1100; }
+#wrap .container .color_chooser .sounder:active { margin-top: 4px; background: #005050; }
+#wrap .container .color_chooser .html_sounder { display: none; }
+#wrap .container .color_chooser .top { border-radius: 2px 2px 0 0; top: 60%; }
+#wrap .container .color_chooser .bottom { border-radius: 0 0 2px 2px; bottom: 10%; }
+#wrap .container .color_chooser .left { left: 55%; }
+#wrap .container .color_chooser .right { left: 14%; }
+#wrap .container .button { float: left; width: 13%; height: 75%; cursor: pointer; border-radius: 5px; display: flex; justify-content: center; align-items: center; color: black; font-size: 60px; font-family: arial; font-weight: bold; text-shadow: -1px -1px 0 #ffffff,   1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; }
+#wrap .container .button:active { transition: margin-top 0.1s ease,box-shadow 0.1s ease; margin-top: 4px; }
+#wrap .container .button + .button { margin-left: 6.666666666%; }

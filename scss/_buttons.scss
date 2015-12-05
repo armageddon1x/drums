@@ -1,0 +1,21 @@
+//buttons with color designation
+
+#color_1{background:$red;@include button_shadow($red_shadow);}
+#color_2{background:$blue;@include button_shadow($blue_shadow);}
+#color_3{background:$green;@include button_shadow($green_shadow);}
+#color_4{background:$gray;@include button_shadow($gray_shadow);}
+
+#color_5{background:$purple;@include button_shadow($purple_shadow);}
+#color_6{background:$orange;@include button_shadow($orange_shadow);}
+#color_7{background:$yellow;@include button_shadow($yellow_shadow);}
+#color_8{background:$brown;@include button_shadow($brown_shadow);}
+
+#color_9{background:$pink;@include button_shadow($pink_shadow);}
+#color_10{background:$dark_gray;@include button_shadow($dark_gray_shadow);}
+#color_11{background:$light_blue;@include button_shadow($light_blue_shadow);}
+#color_12{background:$light_purple;@include button_shadow($light_purple_shadow);}
+
+#color_13{background:$dark_brown;@include button_shadow($dark_brown_shadow);}
+#color_14{background:$light_green;@include button_shadow($light_green_shadow);}
+#color_15{background:$light_red;@include button_shadow($light_red_shadow);}
+#color_16{background:$white;@include button_shadow($white_shadow);}

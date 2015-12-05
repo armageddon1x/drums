@@ -1,0 +1,70 @@
+#panel{
+	position: absolute;
+	top:0;
+	left:97%;
+	z-index:100;
+	width:30%;
+	color:white;
+	// background:black;
+	//
+	#arrow{
+		width: 10%;
+		height: 100vh;
+		@include black_back(.8);
+		float: left;
+		@include flexer();
+
+		#arrowhead{
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 20px 20px 20px 0;
+			border-color: transparent #424242 transparent transparent;
+		}
+	}
+	#top{
+		height: 12vh;
+		width: 90%;
+		float: right;
+		@include black_back(.6);
+		@include flexer();
+	}
+	#sounds{
+		box-sizing:border-box;
+		padding:10px;
+		height: 88vh;
+		width: 90%;
+		float: right;
+		@include black_back(.7);
+		overflow-y: scroll;
+
+		.sound_button{
+	    background:black;
+	    color:white;
+	    border-radius:5px;
+	    text-align:center;
+	    width:100px;
+	    padding:5px;
+	    border:2px solid gray;
+	    cursor: pointer;
+	    // margin-bottom:10px;
+		}
+		.html_sound_button{
+			display:none;
+		}
+		p{
+			color:white;
+			display: inline-block;
+		}
+		hr{
+			width:70%;
+			margin:5px auto;
+			border:0;
+			border-top:1px solid white;
+		}
+	}
+}
+
+.slide{
+	left:-70%;
+}

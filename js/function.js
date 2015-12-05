@@ -23,14 +23,14 @@ $(function(){
   });
   
   //-----------------------------------------------------------//
-  //output ID3 information
+  //k-v array to store sound clips
   //-----------------------------------------------------------//
   // $(".sound_button").click(function(){
   //   $(this).siblings(".html_sound_button").on("change",handleFileSelect,false);
-  // });
-var i=0;
-var j=0;
-var clips={};
+    // });
+  // var i=0;
+  // var j=0;
+  // var clips={};
   //-----------------------------------------------------------//
   //get the ID3 tags and output the tags
   //-----------------------------------------------------------//
@@ -53,23 +53,23 @@ var clips={};
     // console.log($(this));
     $(this).siblings("audio").prop("src", objectUrl);
     // console.log($(this).siblings("audio"));
-    console.log($(this).siblings("audio")[0]);
+    // console.log($(this).siblings("audio")[0]);
 
-    var id=$(this).siblings("audio").attr("id");
-    console.log(id);
-    console.log(window[id]);
-  //    player=$(this)[0];
-  // console.log("player:");
-  // console.log(player);
-  clips[id]=window[id];
-  console.log(clips);
-  console.log(clips.player_1);
+    // var id=$(this).siblings("audio").attr("id");
+    // console.log(id);
+    // console.log(window[id]);
+    // player=$(this)[0];
+    // console.log("player:");
+    // console.log(player);
+    // clips[id]=window[id];
+    // console.log(clips);
+    // console.log(clips.player_1);
 
 
     
-    console.log("counter: "+i);
-    console.log("-------------------------------");
-    i++;
+    // console.log("counter: "+i);
+    // console.log("-------------------------------");
+    // i++;
   });
 
   //-----------------------------------------------------------//
@@ -80,14 +80,14 @@ var clips={};
   $(".sound_button").click(function(){
     $(this).siblings(".player").on("canplaythrough", function(e){
       
-      console.log("other counter: "+j);
-      j++;
-      console.log("************************");
+      // console.log("other counter: "+j);
+      // j++;
+      // console.log("************************");
 
-      //gets player element
-  // player=$(this)[0];
-  // console.log("player:");
-  // console.log(player);
+      // gets player element
+      // player=$(this)[0];
+      // console.log("player:");
+      // console.log(player);
 
       var length=e.currentTarget.duration;
       var duration=$(this).siblings(".file_duration");
@@ -105,30 +105,33 @@ var clips={};
     });
   })
 
-  //-----------------------------------------------------------//
-  //set variable on buttons
-  //-----------------------------------------------------------//
-  var c1=$("#color_1");
-  var c2=$("#color_2");
-  var c3=$("#color_3");
-  var c4=$("#color_4");
-  var c5=$("#color_5");
-  var c6=$("#color_6");
-  var c7=$("#color_7");
-  var c8=$("#color_8");
-  var c9=$("#color_9");
-  var c10=$("#color_10");
-  var c11=$("#color_11");
-  var c12=$("#color_12");
-  var c13=$("#color_13");
-  var c14=$("#color_14");
-  var c15=$("#color_15");
-  var c16=$("#color_16");
 
-  //-----------------------------------------------------------//
-  //call function to play sound on button click
-  //-----------------------------------------------------------//
-  play_sound(c1, player_1);
+// setTimeout(function(){
+//   console.log(clips);
+//   console.log(clips.player_1);
+// },9000);
+  
+var c1=$("#color_1");
+var c2=$("#color_2");
+var c3=$("#color_3");
+var c4=$("#color_4");
+var c5=$("#color_5");
+var c6=$("#color_6");
+var c7=$("#color_7");
+var c8=$("#color_8");
+var c9=$("#color_9");
+var c10=$("#color_10");
+var c11=$("#color_11");
+var c12=$("#color_12");
+var c13=$("#color_13");
+var c14=$("#color_14");
+var c15=$("#color_15");
+var c16=$("#color_16");
+
+  // play_sound($("#color_1"), clips.player_1);
+  // play_sound($("#color_2"), clips.player_2);
+
+  // play_sound(c1, player_1);
   play_sound(c2, player_2);
   play_sound(c3, player_3);
   play_sound(c4, player_4);
@@ -145,6 +148,8 @@ var clips={};
   play_sound(c15, player_15);
   play_sound(c16, player_16);
 
+  play_sound(c1, p1);
+
   //-----------------------------------------------------------//
   //prints tags to screen
   //-----------------------------------------------------------//
@@ -157,22 +162,22 @@ var clips={};
   //-----------------------------------------------------------//
 
   //stores file in a variable
-  function handleFileSelect(evt) {
-    var files = evt.target.files;
-    playFile(files[0]);
-  }
+  // function handleFileSelect(evt) {
+  //   var files = evt.target.files;
+  //   playFile(files[0]);
+  // }
 
-  //
-  function playFile(file) {
-    var freader = new FileReader();   
-    freader.onload = function(e) {
-      player.src = e.target.result;
-      // console.log(e);
-      // console.log(e.target.result);
-      // console.log(player.src);
-    };
-    freader.readAsDataURL(file);
-  }
+  // //
+  // function playFile(file) {
+  //   var freader = new FileReader();   
+  //   freader.onload = function(e) {
+  //     player.src = e.target.result;
+  //     // console.log(e);
+  //     // console.log(e.target.result);
+  //     // console.log(player.src);
+  //   };
+  //   freader.readAsDataURL(file);
+  // }
 
   //-----------------------------------------------------------//
   //plays sound on chosen element
@@ -186,22 +191,6 @@ var clips={};
       soundbite.play();
     });
   }
-
-  //-----------------------------------------------------------//
-  //changes color of buttons
-  //-----------------------------------------------------------//
-  // function button_color($element, picker){
-  //   $element[0].style.background='#'+picker.toString()
-  // }
-
-  //-----------------------------------------------------------//
-  //changes color of box shadow
-  //-----------------------------------------------------------//
-  // function shadow_color($element, picker){
-  //   hex='#'+picker.toString();
-  //   $element.css({'box-shadow':'                                                1px 0px 0px '+hex+', 0px 1px 0px '+hex+',                                2px 1px 0px '+hex+', 1px 2px 0px '+hex+',                               3px 2px 0px '+hex+', 2px 3px 0px '+hex+',                               4px 3px 0px '+hex+', 3px 4px 0px '+hex+',                               5px 4px 0px '+hex+', 4px 5px 0px '+hex+',                                6px 5px 0px '+hex+', 5px 6px 0px '+hex+',                                7px 6px 0px '+hex+', 6px 7px 0px '+hex+',                               8px 7px 0px '+hex+', 7px 8px 0px '+hex+',                                  9px 8px 0px '+hex+', 8px 9px 0px '+hex
-  //   });
-  // }
 
   //-----------------------------------------------------------//
  	//end
