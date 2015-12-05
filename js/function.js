@@ -132,23 +132,39 @@ var c16=$("#color_16");
   // play_sound($("#color_2"), clips.player_2);
 
   // play_sound(c1, player_1);
-  play_sound(c2, player_2);
-  play_sound(c3, player_3);
-  play_sound(c4, player_4);
-  play_sound(c5, player_5);
-  play_sound(c6, player_6);
-  play_sound(c7, player_7);
-  play_sound(c8, player_8);
-  play_sound(c9, player_9);
-  play_sound(c10, player_10);
-  play_sound(c11, player_11);
-  play_sound(c12, player_12);
-  play_sound(c13, player_13);
-  play_sound(c14, player_14);
-  play_sound(c15, player_15);
-  play_sound(c16, player_16);
+  // play_sound(c2, player_2);
+  // play_sound(c3, player_3);
+  // play_sound(c4, player_4);
+  // play_sound(c5, player_5);
+  // play_sound(c6, player_6);
+  // play_sound(c7, player_7);
+  // play_sound(c8, player_8);
+  // play_sound(c9, player_9);
+  // play_sound(c10, player_10);
+  // play_sound(c11, player_11);
+  // play_sound(c12, player_12);
+  // play_sound(c13, player_13);
+  // play_sound(c14, player_14);
+  // play_sound(c15, player_15);
+  // play_sound(c16, player_16);
 
   play_sound(c1, p1);
+  play_sound(c2, p2);
+  play_sound(c3, p3);
+  play_sound(c4, p4);
+  play_sound(c5, p5);
+  play_sound(c6, p6);
+  play_sound(c7, p7);
+  play_sound(c8, p8);
+  play_sound(c9, p9);
+  play_sound(c10, p10);
+  play_sound(c11, p11);
+  play_sound(c12, p12);
+  play_sound(c13, p13);
+  play_sound(c14, p4);
+  play_sound(c15, p15);
+  play_sound(c16, p16);
+
 
   //-----------------------------------------------------------//
   //prints tags to screen

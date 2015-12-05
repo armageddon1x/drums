@@ -9,8 +9,6 @@
 		<script src="js/jscolor.min.js"></script>
 		<script src="js/function.js"></script>
 		<script src="js/function2.js"></script>
-
-		<style type="text/css">audio{display: block;}</style>
 	<body>
 		<!-- header -->
 		<div id="container">
@@ -22,20 +20,22 @@
 				<!-- color change buttons -->
 				<div class="container" id="start">
 					<div class="color_chooser">
+						<div style="height:100%;width:50%;display:inline-block;">
+							<div style="border:solid 1px green;width:44%;height:100%;display:inline-block;"></div>
+							<div style="border:solid 1px green;width:44%;height:100%;display:inline-block;"></div>
+						</div>
 						<!-- buttons for 1 -->
 						<div class="left button_space">
-
-							<!--  -->
-							<button class="sounder">
-								<img src="images/note.png" style="width:70%;">
+							<!-- sound buttons -->
+							<button class="sounder" id="s1">
+								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p1"></audio>
 							<input type="file" accept="audio/*" id="sound_1" class="html_sounder">
-							<!--  -->
-
+							<!-- color buttons -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'BF1100', onFineChange:'button_color($(&quot;#color_1&quot;),$(&quot;.sounder&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'BF1100', onFineChange:'button_color($(&quot;#color_1&quot;),$(&quot;#s1&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -45,9 +45,16 @@
 						<!-- ************************************** -->
 						<!-- buttons for 2 -->
 						<div class="left button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s2">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p2"></audio>
+							<input type="file" accept="audio/*" id="sound_2" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class=" top jscolor 
-							    {valueElement:null,value:'00088F', onFineChange:'button_color($(&quot;#color_2&quot;),this)'}"
+							    {valueElement:null,value:'00088F', onFineChange:'button_color($(&quot;#color_2&quot;),$(&quot;#s2&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -65,9 +72,16 @@
 					<div class="color_chooser">
 						<!-- buttons for 3 -->
 						<div class="right button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s3">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p3"></audio>
+							<input type="file" accept="audio/*" id="sound_3" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class="middle top jscolor 
-							    {valueElement:null,value:'0F6600', onFineChange:'button_color($(&quot;#color_3&quot;),this)'}"
+							    {valueElement:null,value:'0F6600', onFineChange:'button_color($(&quot;#color_3&quot;),$(&quot;#s3&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="middle bottom jscolor 
@@ -77,9 +91,16 @@
 						<!-- ************************************** -->
 						<!-- buttons for 4 -->
 						<div class="right button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s4">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p4"></audio>
+							<input type="file" accept="audio/*" id="sound_4" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'808080', onFineChange:'button_color($(&quot;#color_4&quot;),this)'}"
+							    {valueElement:null,value:'808080', onFineChange:'button_color($(&quot;#color_4&quot;),$(&quot;#s4&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -94,9 +115,16 @@
 					<div class="color_chooser">
 						<!-- buttons for 5 -->
 						<div class="left button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s5">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p5"></audio>
+							<input type="file" accept="audio/*" id="sound_5" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'44024C', onFineChange:'button_color($(&quot;#color_5&quot;),this)'}"
+							    {valueElement:null,value:'44024C', onFineChange:'button_color($(&quot;#color_5&quot;),$(&quot;#s5&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -106,9 +134,16 @@
 						<!-- ************************************** -->
 						<!-- buttons for 6 -->
 						<div class="left button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s6">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p6"></audio>
+							<input type="file" accept="audio/*" id="sound_6" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class=" top jscolor 
-							    {valueElement:null,value:'D97000', onFineChange:'button_color($(&quot;#color_6&quot;),this)'}"
+							    {valueElement:null,value:'D97000', onFineChange:'button_color($(&quot;#color_6&quot;),$(&quot;#s6&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -126,9 +161,16 @@
 					<div class="color_chooser">
 						<!-- buttons for 7 -->
 						<div class="right button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s7">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p7"></audio>
+							<input type="file" accept="audio/*" id="sound_7" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class="middle top jscolor 
-							    {valueElement:null,value:'D9D500', onFineChange:'button_color($(&quot;#color_7&quot;),this)'}"
+							    {valueElement:null,value:'D9D500', onFineChange:'button_color($(&quot;#color_7&quot;),$(&quot;#s7&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="middle bottom jscolor 
@@ -138,9 +180,16 @@
 						<!-- ************************************** -->
 						<!-- buttons for 8 -->
 						<div class="right button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s8">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p8"></audio>
+							<input type="file" accept="audio/*" id="sound_8" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'4C2F00', onFineChange:'button_color($(&quot;#color_8&quot;),this)'}"
+							    {valueElement:null,value:'4C2F00', onFineChange:'button_color($(&quot;#color_8&quot;),$(&quot;#s8&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -155,9 +204,16 @@
 					<div class="color_chooser">
 						<!-- buttons for 9 -->
 						<div class="left button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s9">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p9"></audio>
+							<input type="file" accept="audio/*" id="sound_9" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'FFC0CB', onFineChange:'button_color($(&quot;#color_9&quot;),this)'}"
+							    {valueElement:null,value:'FFC0CB', onFineChange:'button_color($(&quot;#color_9&quot;),$(&quot;#s9&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -167,9 +223,16 @@
 						<!-- ************************************** -->
 						<!-- buttons for 10 -->
 						<div class="left button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s10">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p10"></audio>
+							<input type="file" accept="audio/*" id="sound_10" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class=" top jscolor 
-							    {valueElement:null,value:'232323', onFineChange:'button_color($(&quot;#color_10&quot;),this)'}"
+							    {valueElement:null,value:'232323', onFineChange:'button_color($(&quot;#color_10&quot;),$(&quot;#s10&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -187,9 +250,16 @@
 					<div class="color_chooser">
 						<!-- buttons for 11 -->
 						<div class="right button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s11">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p11"></audio>
+							<input type="file" accept="audio/*" id="sound_11" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class="middle top jscolor 
-							    {valueElement:null,value:'0AD6D9', onFineChange:'button_color($(&quot;#color_11&quot;),this)'}"
+							    {valueElement:null,value:'0AD6D9', onFineChange:'button_color($(&quot;#color_11&quot;),$(&quot;#s11&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="middle bottom jscolor 
@@ -199,9 +269,16 @@
 						<!-- ************************************** -->
 						<!-- buttons for 12 -->
 						<div class="right button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s12">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p12"></audio>
+							<input type="file" accept="audio/*" id="sound_12" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'DB12D3', onFineChange:'button_color($(&quot;#color_12&quot;),this)'}"
+							    {valueElement:null,value:'DB12D3', onFineChange:'button_color($(&quot;#color_12&quot;),$(&quot;#s12&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -216,9 +293,16 @@
 					<div class="color_chooser">
 						<!-- buttons for 13 -->
 						<div class="left button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s13">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p13"></audio>
+							<input type="file" accept="audio/*" id="sound_13" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'3D301C', onFineChange:'button_color($(&quot;#color_13&quot;),this)'}"
+							    {valueElement:null,value:'3D301C', onFineChange:'button_color($(&quot;#color_13&quot;),$(&quot;#s13&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -228,9 +312,16 @@
 						<!-- ************************************** -->
 						<!-- buttons for 14 -->
 						<div class="left button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s14">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p14"></audio>
+							<input type="file" accept="audio/*" id="sound_14" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class=" top jscolor 
-							    {valueElement:null,value:'07D900', onFineChange:'button_color($(&quot;#color_14&quot;),this)'}"
+							    {valueElement:null,value:'07D900', onFineChange:'button_color($(&quot;#color_14&quot;),$(&quot;#s14&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -248,9 +339,16 @@
 					<div class="color_chooser">
 						<!-- buttons for 15 -->
 						<div class="right button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s15">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p15"></audio>
+							<input type="file" accept="audio/*" id="sound_15" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class="middle top jscolor 
-							    {valueElement:null,value:'D9423A', onFineChange:'button_color($(&quot;#color_15&quot;),this)'}"
+							    {valueElement:null,value:'D9423A', onFineChange:'button_color($(&quot;#color_15&quot;),$(&quot;#s15&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="middle bottom jscolor 
@@ -260,9 +358,16 @@
 						<!-- ************************************** -->
 						<!-- buttons for 16 -->
 						<div class="right button_space">
+							<!-- sound buttons -->
+							<button class="sounder" id="s16">
+								<img src="images/note.png">
+							</button>
+							<audio class="player" id="p16"></audio>
+							<input type="file" accept="audio/*" id="sound_16" class="html_sounder">
+							<!-- color buttons -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'DADADB', onFineChange:'button_color($(&quot;#color_16&quot;),this)'}"
+							    {valueElement:null,value:'DADADB', onFineChange:'button_color($(&quot;#color_16&quot;),$(&quot;#s16&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
@@ -300,7 +405,7 @@
 				<div id="sounds">
 
 					<!-- sound file 1-->
-					<div class="sound_file">
+					<!-- <div class="sound_file">
 						<audio class="player" id="player_1"></audio>
 						<div class="sound_button">Sound 1</div>
 						<input type="file" accept="audio/*" class="html_sound_button">
@@ -310,7 +415,7 @@
 						<p>Artist</p><p class="file_artist"></p>
 						<br>
 						<p>Duration</p><p class="file_duration"></p>
-					</div>
+					</div> -->
 					<!-- ************************************** -->
 					<!-- sound file 2-->
 					<div class="sound_file">

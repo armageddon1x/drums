@@ -58,7 +58,7 @@ body{overflow-x:hidden;}
 				display:inline-block;
 				// margin-top: 25%;
 				position:relative;
-				// border:1px blue solid;
+				border:1px blue solid;
 			}
 
 			button{
@@ -78,8 +78,25 @@ body{overflow-x:hidden;}
 				background:rgb(60,60,60);
 				color:rgb(210,210,210);
 				border-radius:2px;
-				border-bottom:5px solid $red;
+
+				img{width:70%;}
 			}
+			#s1{@include sounder_color($red);}
+			#s2{@include sounder_color($blue);}
+			#s3{@include sounder_color($green);}
+			#s4{@include sounder_color($gray);}
+			#s5{@include sounder_color($purple);}
+			#s6{@include sounder_color($orange);}
+			#s7{@include sounder_color($yellow);}
+			#s8{@include sounder_color($brown);}
+			#s9{@include sounder_color($pink);}
+			#s10{@include sounder_color($dark_gray);}
+			#s11{@include sounder_color($light_blue);}
+			#s12{@include sounder_color($light_purple);}
+			#s13{@include sounder_color($dark_brown);}
+			#s14{@include sounder_color($light_green);}
+			#s15{@include sounder_color($light_red);}
+			#s16{@include sounder_color($white);}
 
 			.sounder:active{
 				// transition: margin-top 0.1s ease;
@@ -94,7 +111,7 @@ body{overflow-x:hidden;}
 			.top{border-radius: 2px 2px 0 0;top:60%;}
 			.bottom{border-radius: 0 0 2px 2px;bottom:10%;}
 
-			.left{left:55%;}
+			// .left{left:55%;}
 			.right{left:14%;}
 		}
 
