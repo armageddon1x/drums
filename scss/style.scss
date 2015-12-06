@@ -52,13 +52,66 @@ body{overflow-x:hidden;}
 			height:100%;
 			width:14%;
 
+			.volume_space{
+				height:100%;
+				width:50%;
+				display:inline-block;
+			}
+
+			.volume{
+				// border:solid 1px green;
+				width:40%;
+				height:100%;
+				display:inline-block;
+				position:relative;
+				// border: none;
+    		outline: none;
+			}
+
+			.slider{
+				position:relative;
+				border:2px solid rgb(60,60,60);
+				// margin:10% 15%;
+				position: absolute;
+				bottom:10%;
+				background:rgb(30,30,30);
+				left:30%;
+				// width:70%;
+				// height:80%;
+				// background:blue;
+			}
+
+			.slider .ui-slider-range-min{
+		  	border:2px solid black;
+		  	box-sizing: border-box;
+		  	border-radius:1px;
+			  // border: none;
+			  // outline: none;
+			}
+
+			.slider .ui-slider-handle{
+			    outline: none;
+			    height:10%;
+			    background:rgb(20,20,20);
+			    // margin-left:-1px;
+			}
+
+			#v1 .ui-slider-range-min{background: $red;}
+			#v1 .ui-slider-handle{border:2px solid $red_shadow;}
+
+			#v2 .ui-slider-range-min{background: $blue;}
+			#v2 .ui-slider-handle{border:2px solid $blue_shadow;}
+
+			#v3 .ui-slider-range-min{background: $green;}
+			#v3 .ui-slider-handle{border:2px solid $green_shadow;}
+
 			.button_space{
 				width:20%;
 				height:100%;
 				display:inline-block;
 				// margin-top: 25%;
 				position:relative;
-				border:1px blue solid;
+				// border:1px blue solid;
 			}
 
 			button{

@@ -23,15 +23,6 @@ $(function(){
   });
   
   //-----------------------------------------------------------//
-  //k-v array to store sound clips
-  //-----------------------------------------------------------//
-  // $(".sound_button").click(function(){
-  //   $(this).siblings(".html_sound_button").on("change",handleFileSelect,false);
-    // });
-  // var i=0;
-  // var j=0;
-  // var clips={};
-  //-----------------------------------------------------------//
   //get the ID3 tags and output the tags
   //-----------------------------------------------------------//
   $(".html_sound_button").change(function(e){
@@ -50,26 +41,9 @@ $(function(){
 
     //creating audio 
     objectUrl = URL.createObjectURL(file);
-    // console.log($(this));
+
     $(this).siblings("audio").prop("src", objectUrl);
-    // console.log($(this).siblings("audio"));
-    // console.log($(this).siblings("audio")[0]);
-
-    // var id=$(this).siblings("audio").attr("id");
-    // console.log(id);
-    // console.log(window[id]);
-    // player=$(this)[0];
-    // console.log("player:");
-    // console.log(player);
-    // clips[id]=window[id];
-    // console.log(clips);
-    // console.log(clips.player_1);
-
-
     
-    // console.log("counter: "+i);
-    // console.log("-------------------------------");
-    // i++;
   });
 
   //-----------------------------------------------------------//
@@ -79,15 +53,6 @@ $(function(){
 
   $(".sound_button").click(function(){
     $(this).siblings(".player").on("canplaythrough", function(e){
-      
-      // console.log("other counter: "+j);
-      // j++;
-      // console.log("************************");
-
-      // gets player element
-      // player=$(this)[0];
-      // console.log("player:");
-      // console.log(player);
 
       var length=e.currentTarget.duration;
       var duration=$(this).siblings(".file_duration");
@@ -105,49 +70,29 @@ $(function(){
     });
   })
 
+  //-----------------------------------------------------------//
+  //declaring variables for buttons
+  //-----------------------------------------------------------//
+  var c1=$("#color_1");
+  var c2=$("#color_2");
+  var c3=$("#color_3");
+  var c4=$("#color_4");
+  var c5=$("#color_5");
+  var c6=$("#color_6");
+  var c7=$("#color_7");
+  var c8=$("#color_8");
+  var c9=$("#color_9");
+  var c10=$("#color_10");
+  var c11=$("#color_11");
+  var c12=$("#color_12");
+  var c13=$("#color_13");
+  var c14=$("#color_14");
+  var c15=$("#color_15");
+  var c16=$("#color_16");
 
-// setTimeout(function(){
-//   console.log(clips);
-//   console.log(clips.player_1);
-// },9000);
-  
-var c1=$("#color_1");
-var c2=$("#color_2");
-var c3=$("#color_3");
-var c4=$("#color_4");
-var c5=$("#color_5");
-var c6=$("#color_6");
-var c7=$("#color_7");
-var c8=$("#color_8");
-var c9=$("#color_9");
-var c10=$("#color_10");
-var c11=$("#color_11");
-var c12=$("#color_12");
-var c13=$("#color_13");
-var c14=$("#color_14");
-var c15=$("#color_15");
-var c16=$("#color_16");
-
-  // play_sound($("#color_1"), clips.player_1);
-  // play_sound($("#color_2"), clips.player_2);
-
-  // play_sound(c1, player_1);
-  // play_sound(c2, player_2);
-  // play_sound(c3, player_3);
-  // play_sound(c4, player_4);
-  // play_sound(c5, player_5);
-  // play_sound(c6, player_6);
-  // play_sound(c7, player_7);
-  // play_sound(c8, player_8);
-  // play_sound(c9, player_9);
-  // play_sound(c10, player_10);
-  // play_sound(c11, player_11);
-  // play_sound(c12, player_12);
-  // play_sound(c13, player_13);
-  // play_sound(c14, player_14);
-  // play_sound(c15, player_15);
-  // play_sound(c16, player_16);
-
+  //-----------------------------------------------------------//
+  //plays sound
+  //-----------------------------------------------------------//
   play_sound(c1, p1);
   play_sound(c2, p2);
   play_sound(c3, p3);
@@ -172,28 +117,6 @@ var c16=$("#color_16");
   function print(element, tag){
     element.html(": "+tag);
   }
-
-  //-----------------------------------------------------------//
-  //functions for attaching sound files to buttons
-  //-----------------------------------------------------------//
-
-  //stores file in a variable
-  // function handleFileSelect(evt) {
-  //   var files = evt.target.files;
-  //   playFile(files[0]);
-  // }
-
-  // //
-  // function playFile(file) {
-  //   var freader = new FileReader();   
-  //   freader.onload = function(e) {
-  //     player.src = e.target.result;
-  //     // console.log(e);
-  //     // console.log(e.target.result);
-  //     // console.log(player.src);
-  //   };
-  //   freader.readAsDataURL(file);
-  // }
 
   //-----------------------------------------------------------//
   //plays sound on chosen element

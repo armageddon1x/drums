@@ -57,7 +57,18 @@ body { overflow-x: hidden; }
 #wrap #end { padding-bottom: 1vh; }
 #wrap .container { height: 25%; width: 80%; margin: 0 auto; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.7); }
 #wrap .container .color_chooser { height: 100%; width: 14%; }
-#wrap .container .color_chooser .button_space { width: 20%; height: 100%; display: inline-block; position: relative; border: 1px blue solid; }
+#wrap .container .color_chooser .volume_space { height: 100%; width: 50%; display: inline-block; }
+#wrap .container .color_chooser .volume { width: 40%; height: 100%; display: inline-block; position: relative; outline: none; }
+#wrap .container .color_chooser .slider { position: relative; border: 2px solid #3c3c3c; position: absolute; bottom: 10%; background: #1e1e1e; left: 30%; }
+#wrap .container .color_chooser .slider .ui-slider-range-min { border: 2px solid black; box-sizing: border-box; border-radius: 1px; }
+#wrap .container .color_chooser .slider .ui-slider-handle { outline: none; height: 10%; background: #141414; }
+#wrap .container .color_chooser #v1 .ui-slider-range-min { background: #BF1100; }
+#wrap .container .color_chooser #v1 .ui-slider-handle { border: 2px solid #710B01; }
+#wrap .container .color_chooser #v2 .ui-slider-range-min { background: #00088F; }
+#wrap .container .color_chooser #v2 .ui-slider-handle { border: 2px solid #000442; }
+#wrap .container .color_chooser #v3 .ui-slider-range-min { background: #0F6600; }
+#wrap .container .color_chooser #v3 .ui-slider-handle { border: 2px solid #052500; }
+#wrap .container .color_chooser .button_space { width: 20%; height: 100%; display: inline-block; position: relative; }
 #wrap .container .color_chooser button { width: 70%; height: 15%; display: block; border: none; position: absolute; cursor: pointer; outline: none; }
 #wrap .container .color_chooser .sounder { top: 20%; width: 70%; height: 30%; background: #3c3c3c; color: #d2d2d2; border-radius: 2px; }
 #wrap .container .color_chooser .sounder img { width: 70%; }

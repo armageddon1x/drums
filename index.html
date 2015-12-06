@@ -3,8 +3,10 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Drums</title>
+		<link rel="stylesheet" href="css/jquery-ui.min.css">
 		<link rel="stylesheet" href="css/style.css">
 		<script src="js/jquery.js"></script>
+		<script src="js/jquery-ui.min.js"></script>
 		<script src="js/id3.min.js"></script>
 		<script src="js/jscolor.min.js"></script>
 		<script src="js/function.js"></script>
@@ -20,10 +22,44 @@
 				<!-- color change buttons -->
 				<div class="container" id="start">
 					<div class="color_chooser">
-						<div style="height:100%;width:50%;display:inline-block;">
-							<div style="border:solid 1px green;width:44%;height:100%;display:inline-block;"></div>
-							<div style="border:solid 1px green;width:44%;height:100%;display:inline-block;"></div>
+
+						<div class="volume_space">
+
+							<div class="volume">
+								<div class="slider" id="v1"></div>
+							</div>
+
+							<div class="volume">
+								<div class="slider" id="v2"></div>
+							</div>
+
 						</div>
+
+						<script>
+							$(function() {
+						    $( ".slider" ).slider({
+						      orientation: "vertical",
+						      range: "min",
+						      min: 0,
+						      max: 100,
+						      value: 50,
+						      slide: function(event, ui){
+						        //
+						      }
+						    });
+
+						    var aud = $("#p1")[0];
+					      var vol = $('#v1');
+
+							  vol.slider( {
+							    slide : function(ev, ui) {
+							      aud.volume = ui.value/100; 
+							    } 
+  							});
+						  });
+						</script>
+
+
 						<!-- buttons for 1 -->
 						<div class="left button_space">
 							<!-- sound buttons -->
@@ -199,6 +235,7 @@
 						</div>
 					</div>
 				</div>
+
 				<!-- buttons 9-12 -->
 				<div class="container">
 					<div class="color_chooser">
@@ -288,6 +325,7 @@
 						</div>
 					</div>
 				</div>
+
 				<!-- buttons 13-16 -->
 				<div class="container" id="end">
 					<div class="color_chooser">
@@ -390,6 +428,7 @@
 				    });
 				  }
 		    </script>
+
 			</div>
 			<!-- footer -->
 			<footer id="foot">
