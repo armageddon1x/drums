@@ -19,56 +19,38 @@
 			<h1>Drum Kit</h1>
 			</header>
 			<div id="wrap">
-				<!-- color change buttons -->
 				<div class="container" id="start">
+					<!-- ************************************************ -->
+					<!-- various buttons -->
+					<!-- ************************************************ -->
 					<div class="color_chooser">
-
+						<!-- ************************************************ -->
+						<!-- volume slider space -->
+						<!-- ************************************************ -->
 						<div class="volume_space">
-
+							<!-- volume slider 1 -->
 							<div class="volume">
 								<div class="slider" id="v1"></div>
 							</div>
-
+							<!-- volume slider 2 -->
 							<div class="volume">
 								<div class="slider" id="v2"></div>
 							</div>
-
 						</div>
-
-						<script>
-							$(function() {
-						    $( ".slider" ).slider({
-						      orientation: "vertical",
-						      range: "min",
-						      min: 0,
-						      max: 100,
-						      value: 50,
-						      slide: function(event, ui){
-						        //
-						      }
-						    });
-
-						    var aud = $("#p1")[0];
-					      var vol = $('#v1');
-
-							  vol.slider( {
-							    slide : function(ev, ui) {
-							      aud.volume = ui.value/100; 
-							    } 
-  							});
-						  });
-						</script>
-
-
 						<!-- buttons for 1 -->
 						<div class="left button_space">
+							<!-- ************************************************ -->
 							<!-- sound buttons -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s1">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p1"></audio>
 							<input type="file" accept="audio/*" id="sound_1" class="html_sounder">
+							
+							<!-- ************************************************ -->
 							<!-- color buttons -->
+							<!-- ************************************************ -->
 							<button
 						    class="top jscolor 
 							    {valueElement:null,value:'BF1100', onFineChange:'button_color($(&quot;#color_1&quot;),$(&quot;#s1&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
@@ -142,13 +124,38 @@
 						    class="bottom jscolor 
 							    {valueElement:null,value:'353535', onFineChange:'shadow_color($(&quot;#color_4&quot;),this)'}"
 						  ></button>
-						  <!-- ************************************** -->
+						 <!-- ************************************** -->
+						</div>
+						<!-- volume slider space -->
+						<div class="volume_space">
+							<!-- volume slider 3 -->
+							<div class="volume">
+								<div class="slider" id="v3"></div>
+							</div>
+							<!-- volume slider 4 -->
+							<div class="volume">
+								<div class="slider" id="v4"></div>
+							</div>
 						</div>
 					</div>
+					 
 				</div>
 				<!-- buttons 5-8 -->
 				<div class="container">
 					<div class="color_chooser">
+						<!-- ************************************************ -->
+						<!-- volume slider space -->
+						<!-- ************************************************ -->
+						<div class="volume_space">
+							<!-- volume slider 5 -->
+							<div class="volume">
+								<div class="slider" id="v5"></div>
+							</div>
+							<!-- volume slider 6 -->
+							<div class="volume">
+								<div class="slider" id="v6"></div>
+							</div>
+						</div>
 						<!-- buttons for 5 -->
 						<div class="left button_space">
 							<!-- sound buttons -->
@@ -233,12 +240,38 @@
 						  ></button>
 						  <!-- ************************************** -->
 						</div>
+						<!-- ************************************************ -->
+						<!-- volume slider space -->
+						<!-- ************************************************ -->
+						<div class="volume_space">
+							<!-- volume slider 7 -->
+							<div class="volume">
+								<div class="slider" id="v7"></div>
+							</div>
+							<!-- volume slider 8 -->
+							<div class="volume">
+								<div class="slider" id="v8"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- buttons 9-12 -->
 				<div class="container">
 					<div class="color_chooser">
+						<!-- ************************************************ -->
+						<!-- volume slider space -->
+						<!-- ************************************************ -->
+						<div class="volume_space">
+							<!-- volume slider 9 -->
+							<div class="volume">
+								<div class="slider" id="v9"></div>
+							</div>
+							<!-- volume slider 10 -->
+							<div class="volume">
+								<div class="slider" id="v10"></div>
+							</div>
+						</div>
 						<!-- buttons for 9 -->
 						<div class="left button_space">
 							<!-- sound buttons -->
@@ -323,12 +356,38 @@
 						  ></button>
 						  <!-- ************************************** -->
 						</div>
+						<!-- ************************************************ -->
+						<!-- volume slider space -->
+						<!-- ************************************************ -->
+						<div class="volume_space">
+							<!-- volume slider 11 -->
+							<div class="volume">
+								<div class="slider" id="v11"></div>
+							</div>
+							<!-- volume slider 12 -->
+							<div class="volume">
+								<div class="slider" id="v12"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 
 				<!-- buttons 13-16 -->
 				<div class="container" id="end">
 					<div class="color_chooser">
+						<!-- ************************************************ -->
+						<!-- volume slider space -->
+						<!-- ************************************************ -->
+						<div class="volume_space">
+							<!-- volume slider 13 -->
+							<div class="volume">
+								<div class="slider" id="v13"></div>
+							</div>
+							<!-- volume slider 14 -->
+							<div class="volume">
+								<div class="slider" id="v14"></div>
+							</div>
+						</div>
 						<!-- buttons for 13 -->
 						<div class="left button_space">
 							<!-- sound buttons -->
@@ -413,6 +472,19 @@
 						  ></button>
 						  <!-- ************************************** -->
 						</div>
+						<!-- ************************************************ -->
+						<!-- volume slider space -->
+						<!-- ************************************************ -->
+						<div class="volume_space">
+							<!-- volume slider 15 -->
+							<div class="volume">
+								<div class="slider" id="v15"></div>
+							</div>
+							<!-- volume slider 16 -->
+							<div class="volume">
+								<div class="slider" id="v16"></div>
+							</div>
+						</div>
 					</div>
 				</div>
 				
@@ -428,6 +500,130 @@
 				    });
 				  }
 		    </script>
+		    <script>
+							$(function() {
+								var aud = $("#p1")[0];
+					      var vol = $('#v1');
+
+					      var aud2 = $("#p2")[0];
+					      var vol2 = $('#v2');
+
+						    $(".slider").slider({
+						      orientation: "vertical",
+						      range: "min",
+						      min: 0,
+						      max: 100,
+						      value: 50,
+						    });
+
+						    //
+							  vol.slider( {
+							    slide : function(ev, ui) {
+							      aud.volume=ui.value/100; 
+							    } 
+  							});
+  							//
+  							//
+  							vol2.slider( {
+							    slide : function(ev, ui) {
+							      aud2.volume=ui.value/100; 
+							    } 
+  							});
+  							//
+
+  							//
+  							$("#v3").slider( {
+							    slide : function(ev, ui) {
+							      $("#p3")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v4").slider( {
+							    slide : function(ev, ui) {
+							      $("#p4")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v5").slider( {
+							    slide : function(ev, ui) {
+							      $("#p5")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v6").slider( {
+							    slide : function(ev, ui) {
+							      $("#p6")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v7").slider( {
+							    slide : function(ev, ui) {
+							      $("#p7")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v8").slider( {
+							    slide : function(ev, ui) {
+							      $("#p8")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v9").slider( {
+							    slide : function(ev, ui) {
+							      $("#p9")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v10").slider( {
+							    slide : function(ev, ui) {
+							      $("#p10")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v11").slider( {
+							    slide : function(ev, ui) {
+							      $("#p11")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v12").slider( {
+							    slide : function(ev, ui) {
+							      $("#p12")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v13").slider( {
+							    slide : function(ev, ui) {
+							      $("#p13")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v14").slider( {
+							    slide : function(ev, ui) {
+							      $("#p14")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v15").slider( {
+							    slide : function(ev, ui) {
+							      $("#p15")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							$("#v16").slider( {
+							    slide : function(ev, ui) {
+							      $("#p16")[0].volume=ui.value/100; 
+							    } 
+  							});
+  							//
+
+  							//
+  							// function vol_slide($vol, $aud){
+
+  							// 	console.log($vol);
+  							// 	console.log($aud);
+
+  							// 	$vol.slider({
+							  //   slide : function(ev, ui) {
+							  //     $aud.volume=ui.value/100; 
+							  //   } 
+  							// });
+  							// }
+
+  							// vol_slide($(".v1"),$(".p1"));
+  							// vol_slide($(".v2"),$(".p2"));
+  							
+  							//
+
+						  });
+						</script>
 
 			</div>
 			<!-- footer -->

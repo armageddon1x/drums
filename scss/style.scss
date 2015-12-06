@@ -71,29 +71,24 @@ body{overflow-x:hidden;}
 			.slider{
 				position:relative;
 				border:2px solid rgb(60,60,60);
-				// margin:10% 15%;
 				position: absolute;
 				bottom:10%;
 				background:rgb(30,30,30);
 				left:30%;
-				// width:70%;
-				// height:80%;
-				// background:blue;
 			}
+
+			.right{left:70%;}
 
 			.slider .ui-slider-range-min{
 		  	border:2px solid black;
 		  	box-sizing: border-box;
 		  	border-radius:1px;
-			  // border: none;
-			  // outline: none;
 			}
 
 			.slider .ui-slider-handle{
-			    outline: none;
-			    height:10%;
-			    background:rgb(20,20,20);
-			    // margin-left:-1px;
+		    outline: none;
+		    height:10%;
+		    background:rgb(20,20,20);
 			}
 
 			#v1 .ui-slider-range-min{background: $red;}
@@ -104,6 +99,45 @@ body{overflow-x:hidden;}
 
 			#v3 .ui-slider-range-min{background: $green;}
 			#v3 .ui-slider-handle{border:2px solid $green_shadow;}
+
+			#v4 .ui-slider-range-min{background: $gray;}
+			#v4 .ui-slider-handle{border:2px solid $gray_shadow;}
+
+			#v5 .ui-slider-range-min{background: $purple;}
+			#v5 .ui-slider-handle{border:2px solid $purple_shadow;}
+
+			#v6 .ui-slider-range-min{background: $orange;}
+			#v6 .ui-slider-handle{border:2px solid $orange_shadow;}
+
+			#v7 .ui-slider-range-min{background: $yellow;}
+			#v7 .ui-slider-handle{border:2px solid $yellow_shadow;}
+
+			#v8 .ui-slider-range-min{background: $brown;}
+			#v8 .ui-slider-handle{border:2px solid $brown_shadow;}
+
+			#v9 .ui-slider-range-min{background: $pink;}
+			#v9 .ui-slider-handle{border:2px solid $pink_shadow;}
+
+			#v10 .ui-slider-range-min{background: $dark_gray;}
+			#v10 .ui-slider-handle{border:2px solid $dark_gray_shadow;}
+
+			#v11 .ui-slider-range-min{background: $light_blue;}
+			#v11 .ui-slider-handle{border:2px solid $light_blue_shadow;}
+
+			#v12 .ui-slider-range-min{background: $light_purple;}
+			#v12 .ui-slider-handle{border:2px solid $light_purple_shadow;}
+
+			#v13 .ui-slider-range-min{background: $dark_brown;}
+			#v13 .ui-slider-handle{border:2px solid $dark_brown_shadow;}
+
+			#v14 .ui-slider-range-min{background: $light_green;}
+			#v14 .ui-slider-handle{border:2px solid $light_green_shadow;}
+
+			#v15 .ui-slider-range-min{background: $light_red;}
+			#v15 .ui-slider-handle{border:2px solid $light_red_shadow;}
+
+			#v16 .ui-slider-range-min{background: $white;}
+			#v16 .ui-slider-handle{border:2px solid $white_shadow;}
 
 			.button_space{
 				width:20%;
