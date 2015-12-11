@@ -2,254 +2,313 @@
 	<html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>Drums</title>
+		<title>Drum Pad</title>
+
+		<!-- CSS links -->
 		<link rel="stylesheet" href="css/jquery-ui.min.css">
 		<link rel="stylesheet" href="css/style.css">
+	
+		<!-- JS links -->
 		<script src="js/jquery.js"></script>
 		<script src="js/jquery-ui.min.js"></script>
 		<script src="js/id3.min.js"></script>
 		<script src="js/jscolor.min.js"></script>
 		<script src="js/function.js"></script>
-		<script src="js/function2.js"></script>
+	</head>
 	<body>
-		<!-- header -->
 		<div id="container">
-			<!--  -->
-			<header id="head">
-			<h1>Drum Kit</h1>
-			</header>
+			<!-- start of container -->
+
+			<!-- header -->
+			<header id="head"><h1>Drum Pad</h1></header>
+			<!-- header -->
+
+			<!-- wrap -->
 			<div id="wrap">
+				<!-- buttons 1-4 -->
 				<div class="container" id="start">
 					<!-- ************************************************ -->
-					<!-- various buttons -->
+					<!-- all buttons -->
 					<!-- ************************************************ -->
 					<div class="color_chooser">
 						<!-- ************************************************ -->
 						<!-- volume slider space -->
 						<!-- ************************************************ -->
 						<div class="volume_space">
-							<!-- volume slider 1 -->
 							<div class="volume">
+								<!-- volume slider 1 -->
 								<div class="slider" id="v1"></div>
 							</div>
-							<!-- volume slider 2 -->
 							<div class="volume">
+								<!-- volume slider 2 -->
 								<div class="slider" id="v2"></div>
 							</div>
 						</div>
-						<!-- buttons for 1 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 1-->
+						<!-- ************************************************ -->
 						<div class="left button_space">
 							<!-- ************************************************ -->
-							<!-- sound buttons -->
+							<!-- sound button 1 -->
 							<!-- ************************************************ -->
 							<button class="sounder" id="s1">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p1"></audio>
 							<input type="file" accept="audio/*" id="sound_1" class="html_sounder">
-							
 							<!-- ************************************************ -->
-							<!-- color buttons -->
+							<!-- color button 1-->
 							<!-- ************************************************ -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'BF1100', onFineChange:'button_color($(&quot;#color_1&quot;),$(&quot;#s1&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'BF1100', onFineChange:'button_color($(&quot;#color_1&quot;),$(&quot;#s1&quot;),$(&quot;#v1&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'710B01', onFineChange:'shadow_color($(&quot;#color_1&quot;),this)'}"
+							    {valueElement:null,value:'710B01', onFineChange:'shadow_color($(&quot;#color_1&quot;),$(&quot;#v1&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
 						</div>
-						<!-- ************************************** -->
-						<!-- buttons for 2 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 2-->
+						<!-- ************************************************ -->
 						<div class="left button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 2 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s2">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p2"></audio>
 							<input type="file" accept="audio/*" id="sound_2" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 2-->
+							<!-- ************************************************ -->
 							<button
 						    class=" top jscolor 
-							    {valueElement:null,value:'00088F', onFineChange:'button_color($(&quot;#color_2&quot;),$(&quot;#s2&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}}"
+							    {valueElement:null,value:'00088F', onFineChange:'button_color($(&quot;#color_2&quot;),$(&quot;#s2&quot;),$(&quot;#v2&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'000442', onFineChange:'shadow_color($(&quot;#color_2&quot;),this)'}"
+							    {valueElement:null,value:'000442', onFineChange:'shadow_color($(&quot;#color_2&quot;),$(&quot;#v2&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
-						  <!-- ************************************** -->
 						</div>
 					</div>
 
-					<div class="button" id="color_1">1</div>
-					<div class="button" id="color_2">2</div>
-					<div class="button" id="color_3">3</div>
-					<div class="button" id="color_4">4</div>
+					<!-- ************************************************ -->
+					<!-- click buttons 1-4 for sound -->
+					<!-- ************************************************ -->
+					<div class="button" id="color_1" title="" data-button="sound_1">1</div>
+					<div class="button" id="color_2" title="" data-button="sound_2">2</div>
+					<div class="button" id="color_3" title="" data-button="sound_3">3</div>
+					<div class="button" id="color_4" title="" data-button="sound_4">4</div>
 
+					<!-- ************************************************ -->
+					<!-- all buttons -->
+					<!-- ************************************************ -->
 					<div class="color_chooser">
-						<!-- buttons for 3 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 3-->
+						<!-- ************************************************ -->
 						<div class="right button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 3 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s3">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p3"></audio>
 							<input type="file" accept="audio/*" id="sound_3" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 3-->
+							<!-- ************************************************ -->
 							<button
 						    class="middle top jscolor 
-							    {valueElement:null,value:'0F6600', onFineChange:'button_color($(&quot;#color_3&quot;),$(&quot;#s3&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'0F6600', onFineChange:'button_color($(&quot;#color_3&quot;),$(&quot;#s3&quot;),$(&quot;#v3&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="middle bottom jscolor 
-							    {valueElement:null,value:'052500', onFineChange:'shadow_color($(&quot;#color_3&quot;),this)'}"
+							    {valueElement:null,value:'052500', onFineChange:'shadow_color($(&quot;#color_3&quot;),$(&quot;#v3&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
 						</div>
-						<!-- ************************************** -->
-						<!-- buttons for 4 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 4-->
+						<!-- ************************************************ -->
 						<div class="right button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 4 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s4">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p4"></audio>
 							<input type="file" accept="audio/*" id="sound_4" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 4-->
+							<!-- ************************************************ -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'808080', onFineChange:'button_color($(&quot;#color_4&quot;),$(&quot;#s4&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'808080', onFineChange:'button_color($(&quot;#color_4&quot;),$(&quot;#s4&quot;),$(&quot;#v4&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'353535', onFineChange:'shadow_color($(&quot;#color_4&quot;),this)'}"
+							    {valueElement:null,value:'353535', onFineChange:'shadow_color($(&quot;#color_4&quot;),$(&quot;#v4&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
-						 <!-- ************************************** -->
 						</div>
+						<!-- ************************************************ -->
 						<!-- volume slider space -->
+						<!-- ************************************************ -->
 						<div class="volume_space">
-							<!-- volume slider 3 -->
-							<div class="volume">
+							<div class="volume shift">
+								<!-- volume slider 3 -->
 								<div class="slider" id="v3"></div>
 							</div>
-							<!-- volume slider 4 -->
-							<div class="volume">
+							<div class="volume shift">
+								<!-- volume slider 4 -->
 								<div class="slider" id="v4"></div>
 							</div>
 						</div>
 					</div>
-					 
 				</div>
+
 				<!-- buttons 5-8 -->
 				<div class="container">
+					<!-- ************************************************ -->
+					<!-- all buttons -->
+					<!-- ************************************************ -->
 					<div class="color_chooser">
 						<!-- ************************************************ -->
 						<!-- volume slider space -->
 						<!-- ************************************************ -->
 						<div class="volume_space">
-							<!-- volume slider 5 -->
 							<div class="volume">
+								<!-- volume slider 5 -->
 								<div class="slider" id="v5"></div>
 							</div>
-							<!-- volume slider 6 -->
 							<div class="volume">
+								<!-- volume slider 6 -->
 								<div class="slider" id="v6"></div>
 							</div>
 						</div>
-						<!-- buttons for 5 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 5-->
+						<!-- ************************************************ -->
 						<div class="left button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 5 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s5">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p5"></audio>
 							<input type="file" accept="audio/*" id="sound_5" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 5-->
+							<!-- ************************************************ -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'44024C', onFineChange:'button_color($(&quot;#color_5&quot;),$(&quot;#s5&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'44024C', onFineChange:'button_color($(&quot;#color_5&quot;),$(&quot;#s5&quot;),$(&quot;#v5&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'1F0023', onFineChange:'shadow_color($(&quot;#color_5&quot;),this)'}"
+							    {valueElement:null,value:'1F0023', onFineChange:'shadow_color($(&quot;#color_5&quot;),$(&quot;#v5&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
 						</div>
-						<!-- ************************************** -->
-						<!-- buttons for 6 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 6-->
+						<!-- ************************************************ -->
 						<div class="left button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 2 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s6">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p6"></audio>
 							<input type="file" accept="audio/*" id="sound_6" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 1-->
+							<!-- ************************************************ -->
 							<button
 						    class=" top jscolor 
-							    {valueElement:null,value:'D97000', onFineChange:'button_color($(&quot;#color_6&quot;),$(&quot;#s6&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'D97000', onFineChange:'button_color($(&quot;#color_6&quot;),$(&quot;#s6&quot;),$(&quot;#v6&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'793F00', onFineChange:'shadow_color($(&quot;#color_6&quot;),this)'}"
+							    {valueElement:null,value:'793F00', onFineChange:'shadow_color($(&quot;#color_6&quot;),$(&quot;#v6&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
-						  <!-- ************************************** -->
 						</div>
 					</div>
-
-					<div class="button" id="color_5">5</div>
-					<div class="button" id="color_6">6</div>
-					<div class="button" id="color_7">7</div>
-					<div class="button" id="color_8">8</div>
-
+					
+					<!-- ************************************************ -->
+					<!-- click buttons 5-8 for sound -->
+					<!-- ************************************************ -->
+					<div class="button" id="color_5" title="" data-button="sound_5">5</div>
+					<div class="button" id="color_6" title="" data-button="sound_6">6</div>
+					<div class="button" id="color_7" title="" data-button="sound_7">7</div>
+					<div class="button" id="color_8" title="" data-button="sound_8">8</div>
+					
+					<!-- ************************************************ -->
+					<!-- all buttons -->
+					<!-- ************************************************ -->
 					<div class="color_chooser">
-						<!-- buttons for 7 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 7-->
+						<!-- ************************************************ -->
 						<div class="right button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 7 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s7">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p7"></audio>
 							<input type="file" accept="audio/*" id="sound_7" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 7-->
+							<!-- ************************************************ -->
 							<button
 						    class="middle top jscolor 
-							    {valueElement:null,value:'D9D500', onFineChange:'button_color($(&quot;#color_7&quot;),$(&quot;#s7&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'D9D500', onFineChange:'button_color($(&quot;#color_7&quot;),$(&quot;#s7&quot;),$(&quot;#v7&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="middle bottom jscolor 
-							    {valueElement:null,value:'888500', onFineChange:'shadow_color($(&quot;#color_7&quot;),this)'}"
+							    {valueElement:null,value:'888500', onFineChange:'shadow_color($(&quot;#color_7&quot;),$(&quot;#v7&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
 						</div>
-						<!-- ************************************** -->
-						<!-- buttons for 8 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 8-->
+						<!-- ************************************************ -->
 						<div class="right button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 8 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s8">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p8"></audio>
 							<input type="file" accept="audio/*" id="sound_8" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 8-->
+							<!-- ************************************************ -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'4C2F00', onFineChange:'button_color($(&quot;#color_8&quot;),$(&quot;#s8&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'4C2F00', onFineChange:'button_color($(&quot;#color_8&quot;),$(&quot;#s8&quot;),$(&quot;#v8&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'1F1300', onFineChange:'shadow_color($(&quot;#color_8&quot;),this)'}"
+							    {valueElement:null,value:'1F1300', onFineChange:'shadow_color($(&quot;#color_8&quot;),$(&quot;#v8&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
-						  <!-- ************************************** -->
 						</div>
 						<!-- ************************************************ -->
 						<!-- volume slider space -->
 						<!-- ************************************************ -->
 						<div class="volume_space">
-							<!-- volume slider 7 -->
-							<div class="volume">
+							<div class="volume shift">
+								<!-- volume slider 7 -->
 								<div class="slider" id="v7"></div>
 							</div>
-							<!-- volume slider 8 -->
-							<div class="volume">
+							<div class="volume shift">
+								<!-- volume slider 6 -->
 								<div class="slider" id="v8"></div>
 							</div>
 						</div>
@@ -258,114 +317,143 @@
 
 				<!-- buttons 9-12 -->
 				<div class="container">
+					<!-- ************************************************ -->
+					<!-- all buttons -->
+					<!-- ************************************************ -->
 					<div class="color_chooser">
 						<!-- ************************************************ -->
 						<!-- volume slider space -->
 						<!-- ************************************************ -->
 						<div class="volume_space">
-							<!-- volume slider 9 -->
 							<div class="volume">
+								<!-- volume slider 9 -->
 								<div class="slider" id="v9"></div>
 							</div>
-							<!-- volume slider 10 -->
 							<div class="volume">
+								<!-- volume slider 10 -->
 								<div class="slider" id="v10"></div>
 							</div>
 						</div>
-						<!-- buttons for 9 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 9-->
+						<!-- ************************************************ -->
 						<div class="left button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 9 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s9">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p9"></audio>
 							<input type="file" accept="audio/*" id="sound_9" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 9-->
+							<!-- ************************************************ -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'FFC0CB', onFineChange:'button_color($(&quot;#color_9&quot;),$(&quot;#s9&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'FFC0CB', onFineChange:'button_color($(&quot;#color_9&quot;),$(&quot;#s9&quot;),$(&quot;#v9&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'FF6983', onFineChange:'shadow_color($(&quot;#color_9&quot;),this)'}"
+							    {valueElement:null,value:'FF6983', onFineChange:'shadow_color($(&quot;#color_9&quot;),$(&quot;#v9&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
 						</div>
-						<!-- ************************************** -->
-						<!-- buttons for 10 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 10-->
+						<!-- ************************************************ -->
 						<div class="left button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 10 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s10">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p10"></audio>
 							<input type="file" accept="audio/*" id="sound_10" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 10-->
+							<!-- ************************************************ -->
 							<button
 						    class=" top jscolor 
-							    {valueElement:null,value:'232323', onFineChange:'button_color($(&quot;#color_10&quot;),$(&quot;#s10&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'232323', onFineChange:'button_color($(&quot;#color_10&quot;),$(&quot;#s10&quot;),$(&quot;#v10&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'131313', onFineChange:'shadow_color($(&quot;#color_10&quot;),this)'}"
+							    {valueElement:null,value:'131313', onFineChange:'shadow_color($(&quot;#color_10&quot;),$(&quot;#v10&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
-						  <!-- ************************************** -->
 						</div>
 					</div>
 
-					<div class="button" id="color_9">9</div>
-					<div class="button" id="color_10">10</div>
-					<div class="button" id="color_11">11</div>
-					<div class="button" id="color_12">12</div>
+					<!-- ************************************************ -->
+					<!-- click buttons 9-12 for sound -->
+					<!-- ************************************************ -->
+					<div class="button" id="color_9" title="" data-button="sound_9">9</div>
+					<div class="button" id="color_10" title="" data-button="sound_10">10</div>
+					<div class="button" id="color_11" title="" data-button="sound_11">11</div>
+					<div class="button" id="color_12" title="" data-button="sound_12">12</div>
 
+					<!-- ************************************************ -->
+					<!-- all buttons -->
+					<!-- ************************************************ -->
 					<div class="color_chooser">
-						<!-- buttons for 11 -->
+						<!-- ************************************************ -->
+						<!-- sound button 11 -->
+						<!-- ************************************************ -->
 						<div class="right button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 11 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s11">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p11"></audio>
 							<input type="file" accept="audio/*" id="sound_11" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 11-->
+							<!-- ************************************************ -->
 							<button
 						    class="middle top jscolor 
-							    {valueElement:null,value:'0AD6D9', onFineChange:'button_color($(&quot;#color_11&quot;),$(&quot;#s11&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'0AD6D9', onFineChange:'button_color($(&quot;#color_11&quot;),$(&quot;#s11&quot;),$(&quot;#v11&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="middle bottom jscolor 
-							    {valueElement:null,value:'007C7D', onFineChange:'shadow_color($(&quot;#color_11&quot;),this)'}"
+							    {valueElement:null,value:'007C7D', onFineChange:'shadow_color($(&quot;#color_11&quot;),$(&quot;#v11&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
 						</div>
-						<!-- ************************************** -->
-						<!-- buttons for 12 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 12-->
+						<!-- ************************************************ -->
 						<div class="right button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 12 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s12">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p12"></audio>
 							<input type="file" accept="audio/*" id="sound_12" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 12-->
+							<!-- ************************************************ -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'DB12D3', onFineChange:'button_color($(&quot;#color_12&quot;),$(&quot;#s12&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'DB12D3', onFineChange:'button_color($(&quot;#color_12&quot;),$(&quot;#s12&quot;),$(&quot;#v12&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'73096F', onFineChange:'shadow_color($(&quot;#color_12&quot;),this)'}"
+							    {valueElement:null,value:'73096F', onFineChange:'shadow_color($(&quot;#color_12&quot;),$(&quot;#v12&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
-						  <!-- ************************************** -->
 						</div>
 						<!-- ************************************************ -->
 						<!-- volume slider space -->
 						<!-- ************************************************ -->
 						<div class="volume_space">
-							<!-- volume slider 11 -->
-							<div class="volume">
+							<div class="volume shift">
+								<!-- volume slider 11 -->
 								<div class="slider" id="v11"></div>
 							</div>
-							<!-- volume slider 12 -->
-							<div class="volume">
+							<div class="volume shift">
+								<!-- volume slider 12 -->
 								<div class="slider" id="v12"></div>
 							</div>
 						</div>
@@ -374,114 +462,143 @@
 
 				<!-- buttons 13-16 -->
 				<div class="container" id="end">
+					<!-- ************************************************ -->
+					<!-- all buttons -->
+					<!-- ************************************************ -->
 					<div class="color_chooser">
 						<!-- ************************************************ -->
 						<!-- volume slider space -->
 						<!-- ************************************************ -->
 						<div class="volume_space">
-							<!-- volume slider 13 -->
 							<div class="volume">
+								<!-- volume slider 13 -->
 								<div class="slider" id="v13"></div>
 							</div>
-							<!-- volume slider 14 -->
 							<div class="volume">
+								<!-- volume slider 14 -->
 								<div class="slider" id="v14"></div>
 							</div>
 						</div>
-						<!-- buttons for 13 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 13-->
+						<!-- ************************************************ -->
 						<div class="left button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 13 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s13">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p13"></audio>
 							<input type="file" accept="audio/*" id="sound_13" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 13-->
+							<!-- ************************************************ -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'3D301C', onFineChange:'button_color($(&quot;#color_13&quot;),$(&quot;#s13&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'3D301C', onFineChange:'button_color($(&quot;#color_13&quot;),$(&quot;#s13&quot;),$(&quot;#v13&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'130E07', onFineChange:'shadow_color($(&quot;#color_13&quot;),this)'}"
+							    {valueElement:null,value:'130E07', onFineChange:'shadow_color($(&quot;#color_13&quot;),$(&quot;#v13&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
 						</div>
-						<!-- ************************************** -->
-						<!-- buttons for 14 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 14-->
+						<!-- ************************************************ -->
 						<div class="left button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 14 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s14">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p14"></audio>
 							<input type="file" accept="audio/*" id="sound_14" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 14-->
+							<!-- ************************************************ -->
 							<button
 						    class=" top jscolor 
-							    {valueElement:null,value:'07D900', onFineChange:'button_color($(&quot;#color_14&quot;),$(&quot;#s14&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'07D900', onFineChange:'button_color($(&quot;#color_14&quot;),$(&quot;#s14&quot;),$(&quot;#v14&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'2A7928', onFineChange:'shadow_color($(&quot;#color_14&quot;),this)'}"
+							    {valueElement:null,value:'2A7928', onFineChange:'shadow_color($(&quot;#color_14&quot;),$(&quot;#v14&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
-						  <!-- ************************************** -->
 						</div>
 					</div>
 
-					<div class="button" id="color_13">13</div>
-					<div class="button" id="color_14">14</div>
-					<div class="button" id="color_15">15</div>
-					<div class="button" id="color_16">16</div>
-
+					<!-- ************************************************ -->
+					<!-- click buttons 13-16 for sound -->
+					<!-- ************************************************ -->
+					<div class="button" id="color_13" title="" data-button="sound_13">13</div>
+					<div class="button" id="color_14" title="" data-button="sound_14">14</div>
+					<div class="button" id="color_15" title="" data-button="sound_15">15</div>
+					<div class="button" id="color_16" title="" data-button="sound_16">16</div>
+	
+					<!-- ************************************************ -->
+					<!-- all buttons -->
+					<!-- ************************************************ -->
 					<div class="color_chooser">
-						<!-- buttons for 15 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 15-->
+						<!-- ************************************************ -->
 						<div class="right button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 15 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s15">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p15"></audio>
 							<input type="file" accept="audio/*" id="sound_15" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 15-->
+							<!-- ************************************************ -->
 							<button
 						    class="middle top jscolor 
-							    {valueElement:null,value:'D9423A', onFineChange:'button_color($(&quot;#color_15&quot;),$(&quot;#s15&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'D9423A', onFineChange:'button_color($(&quot;#color_15&quot;),$(&quot;#s15&quot;),$(&quot;#v15&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="middle bottom jscolor 
-							    {valueElement:null,value:'861F1A', onFineChange:'shadow_color($(&quot;#color_15&quot;),this)'}"
+							    {valueElement:null,value:'861F1A', onFineChange:'shadow_color($(&quot;#color_15&quot;),$(&quot;#v15&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
 						</div>
-						<!-- ************************************** -->
-						<!-- buttons for 16 -->
+						<!-- ************************************************ -->
+						<!-- sound/color chooser button space 16-->
+						<!-- ************************************************ -->
 						<div class="right button_space">
-							<!-- sound buttons -->
+							<!-- ************************************************ -->
+							<!-- sound button 16 -->
+							<!-- ************************************************ -->
 							<button class="sounder" id="s16">
 								<img src="images/note.png">
 							</button>
 							<audio class="player" id="p16"></audio>
 							<input type="file" accept="audio/*" id="sound_16" class="html_sounder">
-							<!-- color buttons -->
+							<!-- ************************************************ -->
+							<!-- color button 16-->
+							<!-- ************************************************ -->
 							<button
 						    class="top jscolor 
-							    {valueElement:null,value:'DADADB', onFineChange:'button_color($(&quot;#color_16&quot;),$(&quot;#s16&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
+							    {valueElement:null,value:'DADADB', onFineChange:'button_color($(&quot;#color_16&quot;),$(&quot;#s16&quot;),$(&quot;#v16&quot;),this)',width:150,padding:8,position:'right',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 					    ></button>
 						  <button
 						    class="bottom jscolor 
-							    {valueElement:null,value:'828282', onFineChange:'shadow_color($(&quot;#color_16&quot;),this)'}"
+							    {valueElement:null,value:'828282', onFineChange:'shadow_color($(&quot;#color_16&quot;),$(&quot;#v16&quot;),this)',width:150,padding:8,position:'left',borderColor:'#DDD',borderWidth:4,insetColor:'#FFF',backgroundColor:'#222',margin:5,crossSize:4}"
 						  ></button>
-						  <!-- ************************************** -->
 						</div>
 						<!-- ************************************************ -->
 						<!-- volume slider space -->
 						<!-- ************************************************ -->
 						<div class="volume_space">
-							<!-- volume slider 15 -->
-							<div class="volume">
+							<div class="volume shift">
+								<!-- volume slider 15 -->
 								<div class="slider" id="v15"></div>
 							</div>
-							<!-- volume slider 16 -->
-							<div class="volume">
+							<div class="volume shift">
+								<!-- volume slider 16 -->
 								<div class="slider" id="v16"></div>
 							</div>
 						</div>
@@ -490,367 +607,139 @@
 				
 				<!-- JS for changing color/box shadow of buttons -->
 				<script>
-			    function button_color($element, $border, picker){
+			    function button_color($element, $border, $volume, picker){
 				    $element[0].style.background='#'+picker.toString();
 				    $border.css({'borderColor':'#'+picker.toString()});
+				    $volume.children(".ui-slider-range-min").css({'background':'#'+picker.toString()})
 				  }
-		    	function shadow_color($element, picker){
+		    	function shadow_color($element, $volume, picker){
 				    hex='#'+picker.toString();
 				    $element.css({'box-shadow':'															1px 0px 0px '+hex+', 0px 1px 0px '+hex+',								2px 1px 0px '+hex+', 1px 2px 0px '+hex+',								3px 2px 0px '+hex+', 2px 3px 0px '+hex+',								4px 3px 0px '+hex+', 3px 4px 0px '+hex+',								5px 4px 0px '+hex+', 4px 5px 0px '+hex+',								6px 5px 0px '+hex+', 5px 6px 0px '+hex+',								7px 6px 0px '+hex+', 6px 7px 0px '+hex+',								8px 7px 0px '+hex+', 7px 8px 0px '+hex+',								9px 8px 0px '+hex+', 8px 9px 0px '+hex
 				    });
+				    $volume.children(".ui-slider-handle").css({'borderColor':hex})
 				  }
 		    </script>
 		    <script>
-							$(function() {
-								var aud = $("#p1")[0];
-					      var vol = $('#v1');
+					$(function(){
+				    $(".slider").slider({
+				      orientation: "vertical",
+				      range: "min",
+				      min: 0,
+				      max: 100,
+				      value: 50,
+				    });
 
-					      var aud2 = $("#p2")[0];
-					      var vol2 = $('#v2');
+					  $('#v1').slider( {
+					    slide : function(ev, ui) {
+					      $("#p1")[0].volume=ui.value/100; 
+					    } 
+						});  		
+						$('#v2').slider( {
+					    slide : function(ev, ui) {
+					      $("#p2")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v3").slider( {
+					    slide : function(ev, ui) {
+					      $("#p3")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v4").slider( {
+					    slide : function(ev, ui) {
+					      $("#p4")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v5").slider( {
+					    slide : function(ev, ui) {
+					      $("#p5")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v6").slider( {
+					    slide : function(ev, ui) {
+					      $("#p6")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v7").slider( {
+					    slide : function(ev, ui) {
+					      $("#p7")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v8").slider( {
+					    slide : function(ev, ui) {
+					      $("#p8")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v9").slider( {
+					    slide : function(ev, ui) {
+					      $("#p9")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v10").slider( {
+					    slide : function(ev, ui) {
+					      $("#p10")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v11").slider( {
+					    slide : function(ev, ui) {
+					      $("#p11")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v12").slider( {
+					    slide : function(ev, ui) {
+					      $("#p12")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v13").slider( {
+					    slide : function(ev, ui) {
+					      $("#p13")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v14").slider( {
+					    slide : function(ev, ui) {
+					      $("#p14")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v15").slider( {
+					    slide : function(ev, ui) {
+					      $("#p15")[0].volume=ui.value/100; 
+					    } 
+						});
+						$("#v16").slider( {
+					    slide : function(ev, ui) {
+					      $("#p16")[0].volume=ui.value/100; 
+					    } 
+						});
+						//
 
-						    $(".slider").slider({
-						      orientation: "vertical",
-						      range: "min",
-						      min: 0,
-						      max: 100,
-						      value: 50,
-						    });
+						//
+						// function vol_slide($vol, $aud){
 
-						    //
-							  vol.slider( {
-							    slide : function(ev, ui) {
-							      aud.volume=ui.value/100; 
-							    } 
-  							});
-  							//
-  							//
-  							vol2.slider( {
-							    slide : function(ev, ui) {
-							      aud2.volume=ui.value/100; 
-							    } 
-  							});
-  							//
+						// 	console.log($vol);
+						// 	console.log($aud);
 
-  							//
-  							$("#v3").slider( {
-							    slide : function(ev, ui) {
-							      $("#p3")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v4").slider( {
-							    slide : function(ev, ui) {
-							      $("#p4")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v5").slider( {
-							    slide : function(ev, ui) {
-							      $("#p5")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v6").slider( {
-							    slide : function(ev, ui) {
-							      $("#p6")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v7").slider( {
-							    slide : function(ev, ui) {
-							      $("#p7")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v8").slider( {
-							    slide : function(ev, ui) {
-							      $("#p8")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v9").slider( {
-							    slide : function(ev, ui) {
-							      $("#p9")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v10").slider( {
-							    slide : function(ev, ui) {
-							      $("#p10")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v11").slider( {
-							    slide : function(ev, ui) {
-							      $("#p11")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v12").slider( {
-							    slide : function(ev, ui) {
-							      $("#p12")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v13").slider( {
-							    slide : function(ev, ui) {
-							      $("#p13")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v14").slider( {
-							    slide : function(ev, ui) {
-							      $("#p14")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v15").slider( {
-							    slide : function(ev, ui) {
-							      $("#p15")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							$("#v16").slider( {
-							    slide : function(ev, ui) {
-							      $("#p16")[0].volume=ui.value/100; 
-							    } 
-  							});
-  							//
+						// 	$vol.slider({
+					  //   slide : function(ev, ui) {
+					  //     $aud.volume=ui.value/100; 
+					  //   } 
+						// });
+						// }
 
-  							//
-  							// function vol_slide($vol, $aud){
-
-  							// 	console.log($vol);
-  							// 	console.log($aud);
-
-  							// 	$vol.slider({
-							  //   slide : function(ev, ui) {
-							  //     $aud.volume=ui.value/100; 
-							  //   } 
-  							// });
-  							// }
-
-  							// vol_slide($(".v1"),$(".p1"));
-  							// vol_slide($(".v2"),$(".p2"));
-  							
-  							//
-
-						  });
-						</script>
-
+						// vol_slide($(".v1"),$(".p1"));
+						// vol_slide($(".v2"),$(".p2"));
+						
+						//
+				  });
+				</script>
+				<!-- JS for changing color/box shadow of buttons -->
 			</div>
+			<!-- wrap -->
+
 			<!-- footer -->
-			<footer id="foot">
-				<h2>All Rights Reserved</h2>
-			</footer>
-			<!--  -->
-
-			<div id="panel">
-				<div id="arrow">
-					<div id="arrowhead"></div>
-				</div>
-				<div id="top">Load Your Sounds Here</div>
-				<div id="sounds">
-
-					<!-- sound file 1-->
-					<!-- <div class="sound_file">
-						<audio class="player" id="player_1"></audio>
-						<div class="sound_button">Sound 1</div>
-						<input type="file" accept="audio/*" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div> -->
-					<!-- ************************************** -->
-					<!-- sound file 2-->
-					<div class="sound_file">
-						<audio class="player" id="player_2"></audio>
-						<div class="sound_button">Sound 2</div>
-						<input type="file" accept="audio/*" id="sound_2" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 3-->
-					<div class="sound_file">
-						<audio class="player" id="player_3"></audio>
-						<div class="sound_button">Sound 3</div>
-						<input type="file" accept="audio/*" id="sound_3" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 4-->
-					<div class="sound_file">
-						<audio class="player" id="player_4"></audio>
-						<div class="sound_button">Sound 4</div>
-						<input type="file" accept="audio/*" id="sound_4" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 5-->
-					<div class="sound_file">
-						<audio class="player" id="player_5"></audio>
-						<div class="sound_button">Sound 5</div>
-						<input type="file" accept="audio/*" id="sound_5" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 6-->
-					<div class="sound_file">
-						<audio class="player" id="player_6"></audio>
-						<div class="sound_button">Sound 6</div>
-						<input type="file" accept="audio/*" id="sound_6" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 7-->
-					<div class="sound_file">
-						<audio class="player" id="player_7"></audio>
-						<div class="sound_button">Sound 7</div>
-						<input type="file" accept="audio/*" id="sound_7" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 8-->
-					<div class="sound_file">
-						<audio class="player" id="player_8"></audio>
-						<div class="sound_button">Sound 8</div>
-						<input type="file" accept="audio/*" id="sound_8" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 9-->
-					<div class="sound_file">
-						<audio class="player" id="player_9"></audio>
-						<div class="sound_button">Sound 9</div>
-						<input type="file" accept="audio/*" id="sound_9" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 10-->
-					<div class="sound_file">
-						<audio class="player" id="player_10"></audio>
-						<div class="sound_button">Sound 10</div>
-						<input type="file" accept="audio/*" id="sound_10" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 11-->
-					<div class="sound_file">
-						<audio class="player" id="player_11"></audio>
-						<div class="sound_button">Sound 11</div>
-						<input type="file" accept="audio/*" id="sound_11" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 12-->
-					<div class="sound_file">
-						<audio class="player" id="player_12"></audio>
-						<div class="sound_button">Sound 12</div>
-						<input type="file" accept="audio/*" id="sound_12" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 13-->
-					<div class="sound_file">
-						<audio class="player" id="player_13"></audio>
-						<div class="sound_button">Sound 13</div>
-						<input type="file" accept="audio/*" id="sound_13" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 14-->
-					<div class="sound_file">
-						<audio class="player" id="player_14"></audio>
-						<div class="sound_button">Sound 14</div>
-						<input type="file" accept="audio/*" id="sound_14" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 15-->
-					<div class="sound_file">
-						<audio class="player" id="player_15"></audio>
-						<div class="sound_button">Sound 15</div>
-						<input type="file" accept="audio/*" id="sound_15" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-					<!-- sound file 16-->
-					<div class="sound_file">
-						<audio class="player" id="player_16"></audio>
-						<div class="sound_button">Sound 16</div>
-						<input type="file" accept="audio/*" id="sound_16" class="html_sound_button">
-						
-						<p>Title</p><p class="file_title"></p>
-						<br>
-						<p>Artist</p><p class="file_artist"></p>
-						<br>
-						<p>Duration</p><p class="file_duration"></p>
-					</div>
-					<!-- ************************************** -->
-
-				</div>
-			</div>
+			<footer id="foot"><h2>All Rights Reserved</h2></footer>
+			<!-- footer -->
 		</div>
+
+		<!-- end of container -->
 		</div>
 	</body>
 	</html>

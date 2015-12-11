@@ -44,13 +44,11 @@
 
 * { margin: 0; padding: 0; font-family: arial; }
 
-body { overflow-x: hidden; }
-
 #head { height: 11vh; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.9); }
-#head h1 { text-align: center; color: white; font-size: 60px; }
+#head h1 { text-align: center; color: white; font-size: 50px; }
 
 #foot { height: 7vh; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.9); }
-#foot h2 { text-align: center; color: white; font-size: 30px; }
+#foot h2 { text-align: center; color: white; font-size: 24px; }
 
 #wrap { height: 80vh; background: #242424; padding-bottom: 2vh; }
 #wrap #start { padding-top: 1vh; }
@@ -59,10 +57,11 @@ body { overflow-x: hidden; }
 #wrap .container .color_chooser { height: 100%; width: 14%; }
 #wrap .container .color_chooser .volume_space { height: 100%; width: 50%; display: inline-block; }
 #wrap .container .color_chooser .volume { width: 40%; height: 100%; display: inline-block; position: relative; outline: none; }
+#wrap .container .color_chooser .shift { left: 15%; }
 #wrap .container .color_chooser .slider { position: relative; border: 2px solid #3c3c3c; position: absolute; bottom: 10%; background: #1e1e1e; left: 30%; }
 #wrap .container .color_chooser .right { left: 70%; }
 #wrap .container .color_chooser .slider .ui-slider-range-min { border: 2px solid black; box-sizing: border-box; border-radius: 1px; }
-#wrap .container .color_chooser .slider .ui-slider-handle { outline: none; height: 10%; background: #141414; }
+#wrap .container .color_chooser .slider .ui-slider-handle { outline: none; height: 10%; background: #3c3c3c; cursor: pointer; }
 #wrap .container .color_chooser #v1 .ui-slider-range-min { background: #BF1100; }
 #wrap .container .color_chooser #v1 .ui-slider-handle { border: 2px solid #710B01; }
 #wrap .container .color_chooser #v2 .ui-slider-range-min { background: #00088F; }
@@ -123,3 +122,5 @@ body { overflow-x: hidden; }
 #wrap .container .button { float: left; width: 13%; height: 75%; cursor: pointer; border-radius: 5px; display: flex; justify-content: center; align-items: center; color: black; font-size: 60px; font-family: arial; font-weight: bold; text-shadow: -1px -1px 0 #ffffff,   1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; }
 #wrap .container .button:active { transition: margin-top 0.1s ease,box-shadow 0.1s ease; margin-top: 4px; }
 #wrap .container .button + .button { margin-left: 6.666666666%; }
+
+.ui-tooltip { background: rgba(0, 0, 0, 0.7); padding: 10px 20px; color: gainsboro; border-radius: 5px; font: 14px "Helvetica Neue", Sans-Serif; box-shadow: 0 0 7px #969696; border: 1px solid gainsboro; }

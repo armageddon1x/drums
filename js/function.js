@@ -4,67 +4,108 @@ $(function(){
   //-----------------------------------------------------------//
 
   //-----------------------------------------------------------//
-	//opening/closing panel
+  //bind styled button to file upload button
   //-----------------------------------------------------------//
-	var flag=true;
-
-	//animation to open/close side panel
-	$("#arrow").click(function(){
-  	if(flag){$("#panel").animate({left:"70%"});}
-    else{$("#panel").animate({left:"97%"});}
-    flag=!flag;
-  });
-
-  //-----------------------------------------------------------//
-	//bind styled button to file upload button
-  //-----------------------------------------------------------//
-  $(".sound_button").on("click", function(){
-    $(this).siblings(".html_sound_button").click();
+  $(".sounder").on("click", function(){
+    $(this).siblings(".html_sounder").click();
   });
   
   //-----------------------------------------------------------//
-  //get the ID3 tags and output the tags
+  //array to store metadata
   //-----------------------------------------------------------//
-  $(".html_sound_button").change(function(e){
+  var metadata={}
+
+  //-----------------------------------------------------------//
+  //get the ID3 tags and save them into array
+  //-----------------------------------------------------------//
+  $(".html_sounder").change(function(e){
     //setting the file
     var file=e.currentTarget.files[0];
 
-    //setting the output elements
-    var title=$(this).siblings(".file_title");
-    var artist=$(this).siblings(".file_artist");
+    var button=$(this);
 
     //ID3 tag reader
     id3(this.files[0], function(err, tags) {
-      print(title, tags.title);
-      print(artist, tags.artist);
+      // print(title, tags.title);
+      // print(artist, tags.artist);
+
+      var button_id=button.attr("id");
+      // console.log(button_id);
+
+      metadata[button_id+"_title"]=trimmer(tags.title);
+      metadata[button_id+"_artist"]=tags.artist;
+
+      // console.log(metadata[button_id+"_title"]);
+      // console.log(metadata[button_id+"_title"].length);
+      // console.log(metadata[button_id+"_title"].trim().length);
+
+      if((tags.title===undefined)||(tags.title===null)||(tags.title==="")){
+        // console.log(metadata[button_id+"_title"]);
+        // console.log(metadata[button_id+"_title"].length);
+        metadata[button_id+"_title"]="N/A";
+      }
+
+      if((tags.artist===undefined)||(tags.artist===null)){
+        metadata[button_id+"_artist"]="N/A";
+      }
+
+      // console.log(metadata);
     });
 
     //creating audio 
     objectUrl = URL.createObjectURL(file);
-
     $(this).siblings("audio").prop("src", objectUrl);
-    
+
   });
 
   //-----------------------------------------------------------//
-  //get the duration of the song
+  //get the duration of the song and save it into array
   //-----------------------------------------------------------//
   var objectUrl;
 
-  $(".sound_button").click(function(){
-    $(this).siblings(".player").on("canplaythrough", function(e){
+  $(".sounder").click(function(){
 
+    var button_id=$(this).siblings(".html_sounder").attr("id");
+
+    // console.log("that");
+    // console.log(button_id);
+
+    $(this).siblings(".player").on("canplaythrough", function(e){
+      //getting the total duration
       var length=e.currentTarget.duration;
-      var duration=$(this).siblings(".file_duration");
       
+      //turning duration in seconds to minutes
       var minutes=Math.floor(length/60);
       var seconds=(length%60).toFixed(0);
-
       var time=minutes+":";
       if(seconds<10){time=time+"0"+seconds;}
       else{time=time+seconds;}
 
-      print(duration, time);
+      metadata[button_id+"_duration"]=time;
+      // console.log(metadata);
+
+      $(".button").tooltip({
+        content: function (){
+
+        var button_num=$(this)[0];
+        console.log(button_num);
+
+        var data=button_num.dataset;
+        console.log(button_num.dataset);
+
+        var button=data.button;
+        console.log(button);
+        console.log(metadata);
+
+        if(metadata[button+"_title"]!==undefined&&metadata[button+"_artist"]!==undefined&&metadata[button+"_duration"]!==undefined){
+          return "<p><b>Title:</b> "+metadata[button+"_title"]+"</p><p><b>Artist:</b> "+metadata[button+"_artist"]+"</p><p><b>Duration:</b> "+metadata[button+"_duration"]+"</p>";
+        }else{
+          return "";
+        }
+
+        
+        }
+      });
 
       URL.revokeObjectURL(objectUrl);
     });
@@ -123,14 +164,45 @@ $(function(){
   //-----------------------------------------------------------//
   function play_sound(element, soundbite){
     element.click(function(){
-      console.log(element);
-      console.log(soundbite);
+      // console.log(element);
+      // console.log(soundbite);
       soundbite.pause();
       soundbite.currentTime=0;
       soundbite.play();
     });
   }
 
+  //
+  $(".sounder").tooltip({
+    items:".sounder",
+    content:function(){
+       return "<p>Upload your sound clip here</p>";
+    }
+  });
+  $(".slider").tooltip({
+    items:".slider",
+    content:function(){
+       return "<p>Change the volume here</p>";
+    }
+  });
+  $(".top").tooltip({
+    items:".top",
+    content:function(){
+       return "<p>Change the color of the button here</p>";
+    }
+  });
+  $(".bottom").tooltip({
+    items:".bottom",
+    content:function(){
+       return "<p>Change the color of the button shadow here</p>";
+    }
+  });
+
+  //
+  
+function trimmer(word) {
+    return word.replace(/^\s+|\s+$/gm,'');
+}
   //-----------------------------------------------------------//
  	//end
   //-----------------------------------------------------------//
