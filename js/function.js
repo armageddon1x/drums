@@ -21,6 +21,7 @@ $(function(){
   $(".html_sounder").change(function(e){
     //setting the file
     var file=e.currentTarget.files[0];
+    var type=file.type;
 
     var button=$(this);
 
@@ -32,8 +33,9 @@ $(function(){
       var button_id=button.attr("id");
       // console.log(button_id);
 
-      metadata[button_id+"_title"]=trimmer(tags.title);
+      metadata[button_id+"_title"]=tags.title;
       metadata[button_id+"_artist"]=tags.artist;
+      metadata[button_id+"_type"]=type;
 
       // console.log(metadata[button_id+"_title"]);
       // console.log(metadata[button_id+"_title"].length);
@@ -47,6 +49,19 @@ $(function(){
 
       if((tags.artist===undefined)||(tags.artist===null)){
         metadata[button_id+"_artist"]="N/A";
+      }
+
+      if(file.type==="audio/mp3"){
+        metadata[button_id+"_type"]="MP3";
+      }
+      else if(file.type==="audio/wav"){
+        metadata[button_id+"_type"]="WAV";
+      }
+      else if(file.type==="audio/ogg"){
+        metadata[button_id+"_type"]="ogg";
+      }
+      else{
+        metadata[button_id+"_type"]="N/A";
       }
 
       // console.log(metadata);
@@ -73,6 +88,7 @@ $(function(){
     $(this).siblings(".player").on("canplaythrough", function(e){
       //getting the total duration
       var length=e.currentTarget.duration;
+     
       
       //turning duration in seconds to minutes
       var minutes=Math.floor(length/60);
@@ -82,28 +98,29 @@ $(function(){
       else{time=time+seconds;}
 
       metadata[button_id+"_duration"]=time;
+      
       // console.log(metadata);
 
       $(".button").tooltip({
         content: function (){
 
-        var button_num=$(this)[0];
-        console.log(button_num);
+          var button_num=$(this)[0];
+          // console.log(button_num);
 
-        var data=button_num.dataset;
-        console.log(button_num.dataset);
+          var data=button_num.dataset;
+          // console.log(button_num.dataset);
 
-        var button=data.button;
-        console.log(button);
-        console.log(metadata);
+          var button=data.button;
+          // console.log(button);
+          // console.log(metadata);
 
-        if(metadata[button+"_title"]!==undefined&&metadata[button+"_artist"]!==undefined&&metadata[button+"_duration"]!==undefined){
-          return "<p><b>Title:</b> "+metadata[button+"_title"]+"</p><p><b>Artist:</b> "+metadata[button+"_artist"]+"</p><p><b>Duration:</b> "+metadata[button+"_duration"]+"</p>";
-        }else{
-          return "";
-        }
-
-        
+          if(metadata[button+"_title"]!==undefined&&metadata[button+"_artist"]!==undefined&&metadata[button+"_duration"]!==undefined){
+            //
+            return "<p><b>Title:</b> "+metadata[button+"_title"]+"</p><p><b>Artist:</b> "+metadata[button+"_artist"]+"</p><p><b>Duration:</b> "+metadata[button+"_duration"]+"</p></p><p><b>Type:</b> "+metadata[button+"_type"]+"</p>";
+          }else{
+            //
+            return "";
+          }
         }
       });
 
@@ -164,8 +181,8 @@ $(function(){
   //-----------------------------------------------------------//
   function play_sound(element, soundbite){
     element.click(function(){
-      // console.log(element);
-      // console.log(soundbite);
+      console.log(element);
+      console.log(soundbite);
       soundbite.pause();
       soundbite.currentTime=0;
       soundbite.play();

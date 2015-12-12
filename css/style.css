@@ -45,10 +45,10 @@
 * { margin: 0; padding: 0; font-family: arial; }
 
 #head { height: 11vh; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.9); }
-#head h1 { text-align: center; color: white; font-size: 50px; }
+#head h1 { text-align: center; color: white; font-size: 45px; }
 
 #foot { height: 7vh; display: flex; justify-content: center; align-items: center; background: rgba(0, 0, 0, 0.9); }
-#foot h2 { text-align: center; color: white; font-size: 24px; }
+#foot h2 { text-align: center; color: white; font-size: 20px; }
 
 #wrap { height: 80vh; background: #242424; padding-bottom: 2vh; }
 #wrap #start { padding-top: 1vh; }
@@ -114,13 +114,15 @@
 #wrap .container .color_chooser #s14 { border-bottom: 5px solid #07D900; }
 #wrap .container .color_chooser #s15 { border-bottom: 5px solid #D9423A; }
 #wrap .container .color_chooser #s16 { border-bottom: 5px solid #DADADB; }
-#wrap .container .color_chooser .sounder:active { margin-top: 4px; background: #005050; }
+#wrap .container .color_chooser .sounder:active { margin-top: 4px; background: #646464; }
 #wrap .container .color_chooser .html_sounder { display: none; }
 #wrap .container .color_chooser .top { border-radius: 2px 2px 0 0; top: 60%; }
 #wrap .container .color_chooser .bottom { border-radius: 0 0 2px 2px; bottom: 10%; }
 #wrap .container .color_chooser .right { left: 14%; }
 #wrap .container .button { float: left; width: 13%; height: 75%; cursor: pointer; border-radius: 5px; display: flex; justify-content: center; align-items: center; color: black; font-size: 60px; font-family: arial; font-weight: bold; text-shadow: -1px -1px 0 #ffffff,   1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff; }
 #wrap .container .button:active { transition: margin-top 0.1s ease,box-shadow 0.1s ease; margin-top: 4px; }
-#wrap .container .button + .button { margin-left: 6.666666666%; }
+#wrap .container .button + .button { margin-left: 5%; }
+#wrap .container .button:nth-child(2) { margin-left: 1%; }
+#wrap .container .button:nth-child(5) { margin-right: 1%; }
 
 .ui-tooltip { background: rgba(0, 0, 0, 0.7); padding: 10px 20px; color: gainsboro; border-radius: 5px; font: 14px "Helvetica Neue", Sans-Serif; box-shadow: 0 0 7px #969696; border: 1px solid gainsboro; }
